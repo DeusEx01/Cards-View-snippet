@@ -1,4 +1,3 @@
-````
 ---
 tags:
   - book
@@ -36,4 +35,3 @@ cssclasses:
 
 # CHARACTERS
 1. Characters are characters
-````
