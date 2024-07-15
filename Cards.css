@@ -2,51 +2,82 @@
 /*
 author: @DeusEx01
 version: 1.0.0
-If you like the snippet I'd appreciate if you star it on GitHub:
+If you liked the snippet I'd appreciate if you ✰✰✰✰✰ it on GitHub:
 https://github.com/DeusEx01/Cards-View-snippet/tree/main
 
 INSPIRED BY @kepano https://github.com/sponsors/kepano
 */
-/*#endregion 
-Here you can find some styles for fast custom styles like color, width of border, width of cards e.t.c.
-*/
+/*#endregion*/
+
+/*#region CUSTOM CHANGES*/
+/*Here you can find some styles for fast custom changes like color, width of border, width of cards, color of progress bar e.t.c.*/
 body {
   --cards-max-width: 1fr;
   --cards-mobile-width: 120px;
-  --cards-image-height: 400px;
   --cards-padding: 1.2em;
   --cards-image-fit: contain;
   --cards-aspect-ratio: auto;
-  --cards-columns: repeat(auto-fit, minmax(var(--cards-min-width), var(--cards-max-width))); 
+  --cards-columns: repeat(auto-fit, minmax(var(--cards-min-width), var(--cards-max-width)));
 
-  /*What you can suggest with no fear in your heart*/
+  /*What you can change with no fear in your heart*/
   --cards-min-width: 200px;
+  --cards-row-height: 50px;
+  --cards-background: transparent;
+
+  --cards-columns-gap: 5px;
+  --cards-row-gap: calc(var(--cards-columns-gap) * 1.5);
+
+  --cards-image-height: 260px;
+  --cards-image-zoom: 100%;
+
+
   --cards-border-width: 1px;
   --cards-border-color: var(--divider-color);
-  --cards-background: transparent;
-}
-:root {
 
+  --cards-link-font-color: var(--link-color);
+  --cards-link-font-size: unset;
+  --cards-link-font-weight: unset;
 
+  --cards-font-color: unset;
+  --cards-font-size: 15px;
+  --cards-font-weight: 500;
+  /*from 100 to 950 values*/
+
+  --cards-list-font-size: unset;
+  --cards-list-font-weight: unset;
+
+  --cards-progressbar-font-size: 10px;
+  --cards-progressbar-color: var(--interactive-accent);
+
+  --cards-left-icon: "⍨";
+  --cards-right-icon: "⍨";
 }
-/*#region Make card view*/
+
+/*#endregion*/
+
+/*#region CARD VIEW*/
 .cards table.dataview tbody {
-  clear: both;
-  padding: 15px;
   display: grid;
-	justify-items: center;
+  justify-items: center;
   grid-template-columns: var(--cards-columns);
-  grid-column-gap: 25px;
-  grid-row-gap: 0.75rem; }
+  grid-column-gap: var(--cards-columns-gap);
+  grid-row-gap: var(--cards-row-gap);
+  justify-items: center;
+
+  clear: both;
+}
 
 .cards table.dataview thead {
   display: none;
 }
+
 /*#endregion*/
-/*#region Tweak every card itself*/
-.cards table.dataview > tbody > tr {
+
+/*#region CARDS*/
+.cards table.dataview>tbody>tr {
   display: flex;
   flex-direction: column;
+  align-items: stretch;
 
   border: var(--cards-border-width) solid var(--cards-border-color);
   border-radius: 6px;
@@ -55,34 +86,145 @@ body {
   width: var(--cards-min-width);
 
   padding: 0 0 calc(var(--cards-padding)/3) 0;
-	margin: 0;
-  
+  margin: 0;
+
+  color: var(--cards-font-color);
 }
-.cards table.dataview > tbody > tr > td {
-  height: 50px;
+
+.cards table.dataview>tbody>tr>td {
+  text-align: center;
 }
-.cards table.dataview > tbody > tr > td:not(.cards table.dataview > tbody > tr > td:last-child) {
+
+.cards table.dataview>tbody>tr>td:not(.cards table.dataview > tbody > tr > td:last-child, .cards table.dataview > tbody > tr > td:first-child) {
+  height: var(--cards-row-height);
+  font-size: var(--cards-font-size);
+  font-weight: var(--cards-font-weight);
+}
+
+.cards table.dataview>tbody>tr>td:not(.cards table.dataview > tbody > tr > td:last-child) {
   border-bottom: 1px solid var(--cards-border-color);
-  text-align: center;
 }
 
-.cards table.dataview tbody > tr > td:first-child {
-  height: 260px;
+.cards table.dataview tbody>tr>td:first-child {
+  display: flex;
+  justify-content: center;
+
+  height: var(--cards-image-height);
   text-align: center;
+
 }
 
-.cards table.dataview tbody > tr > td img {
+.cards table.dataview tbody>tr>td a {
+  /*Adds `...` if link text is very long*/
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
   height: 100%;
+
+  text-decoration: none;
+  color: var(--cards-link-font-color);
+  font-size: var(--cards-link-font-size);
+  font-weight: var(--cards-link-font-weight);
 }
+
+.cards table.dataview>tbody>tr>td>span:first-child {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cards table.dataview tbody>tr>td img {
+  height: var(--cards-image-height);
+  width: auto;
+  transform: scale(var(--cards-image-zoom))
+}
+
+
+
 /*#endregion*/
-/*#region Support classes*/
-  
-/*#endregion*/
+
+/*#region SUPPORT CLASSES*/
+
+
 /*Text align left*/
-.cards.text-left table.dataview > tbody > tr > td:not(.cards table.dataview tbody > tr > td:first-child){
+.cards.text-left table.dataview>tbody>tr>td:not(.cards table.dataview tbody > tr > td:first-child) {
   text-align: left;
 }
+
 /*Text align right*/
-.cards.text-right table.dataview > tbody > tr > td:not(.cards table.dataview tbody > tr > td:first-child){
+.cards.text-right table.dataview>tbody>tr>td:not(.cards table.dataview tbody > tr > td:first-child) {
   text-align: right;
 }
+
+/*Readable line width fixing*/
+.cards.cards-readline-off.markdown-preview-view.is-readable-line-width .markdown-preview-sizer,
+.cards.cards-readline-off.markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer,
+.cards.cards-readline-off.markdown-source-view.mod-cm6.is-readable-line-width .cm-content {
+  max-width: 100% !important;
+  margin: auto auto;
+}
+
+/*Property names and decorations*/
+.cards-icon {
+  font-size: 10px;
+  font-weight: 300;
+  display: block;
+}
+
+.cards-icon::before {
+  content: var(--cards-left-icon);
+}
+
+.cards-icon::after {
+  content: var(--cards-right-icon);
+}
+
+/*#endregion*/
+
+/*#region LISTS*/
+.cards table.dataview tbody>tr>td>ul {
+  list-style: none;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  font-size: var(--cards-list-font-size);
+  font-weight: var(--cards-list-font-weight);
+}
+
+.cards table.dataview tbody>tr>td>ul>li {
+  display: inline;
+  margin: 0;
+}
+
+.cards table.dataview tbody>tr>td>ul>li:not(.cards table.dataview tbody>tr>td>ul>li:last-child)::after {
+  content: ", ";
+  display: inline;
+}
+
+/*#endregion*/
+
+/*#region PROGRESS BAR*/
+
+
+.cards.markdown-preview-view progress,
+.cards.markdown-rendered progress,
+.cards.markdown-source-view.is-live-preview progress {
+  display: block;
+  width: 100%;
+  height: 15px;
+}
+
+.cards progress::-webkit-progress-value {
+  background: var(--cards-progressbar-color) !important;
+}
+
+.cards table.dataview tbody>tr>td:last-child {
+  font-size: var(--cards-progressbar-font-size);
+  font-weight: var(--cards-font-weight);
+}
+
+/*#endregion*/
