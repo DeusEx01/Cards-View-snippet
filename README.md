@@ -108,11 +108,11 @@ Before: ![image|200](https://github.com/user-attachments/assets/c99be477-49f4-46
 After: ![image|200](https://github.com/user-attachments/assets/beb0ef09-b99e-401f-80b9-125578e9e8db)
 That's it for basic things.
 
-Now if we want to change colors, border-width, width of cards, gaps between cards and so on, follow next steps:
+## Now if we want to change colors, border-width, width of cards, gaps between cards and so on, follow next steps:
 1. Find and open downloaded `Cards.css` snippet with any code redactor (I use a VS code)
 2. Scroll down to 22nd line ![image](https://github.com/user-attachments/assets/51562121-fafc-4f1b-9e3d-2a0c166954dd)
 
-Here are placed some basic styles to your convenience. Lets check a few lines
+## Here are placed some basic styles to your convenience. Lets check a few lines
 1. `--cards-min-width: 200px;` changing 200px to your number we can narrow or widen width of cards.
 200px: 
 ![image|200](https://github.com/user-attachments/assets/ccde1a5f-fc17-46e4-b66c-df97ceb0d73e)
@@ -122,8 +122,10 @@ Here are placed some basic styles to your convenience. Lets check a few lines
 ![image"200](https://github.com/user-attachments/assets/924e9c80-b8d3-4f6f-b0e9-441b33e18f6c)
 3. `--cards--header-lines-hide: 2;` and `--cards-lines-hide: 2;`. These styles allow to say how many rows we want to see before it's trucated **if it's too long**. E.g. we have value 1 in first property, it means if link text is too long for 1 row then last symbols are replaced with `...` at the end 
 Original link text ![image](https://github.com/user-attachments/assets/e897e1c1-de84-43f6-a359-aba743ca4fa1)
-Long text with 2+ rows ![image](https://github.com/user-attachments/assets/b25ef864-3f99-46b2-b44a-053261d182fb)
-Long text with 1+ rows ![image](https://github.com/user-attachments/assets/8f448762-c740-482c-9c1c-fbc34b4ce64f)
+Long text with 2+ rows
+![image](https://github.com/user-attachments/assets/b25ef864-3f99-46b2-b44a-053261d182fb)
+Long text with 1+ rows
+![image](https://github.com/user-attachments/assets/8f448762-c740-482c-9c1c-fbc34b4ce64f)
 
 > I tried to name styles very understandable so it's easy to find needed one. Good luck.
 
