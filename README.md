@@ -18,7 +18,7 @@ First of all this snippet was inspired my Minimal theme cards. It wark in with D
 1. Download and enable **Dataview plugin**, learn it.
 2. Download **Cards.css** file and insert it in your folder e.g. `C:\Users\User\Obsidian_folder\.obsidian\snippets\Cards.css`
 3. Enable snippet in `Settings > Appearance > CSS snippets`
-4. Create a book note. (You can copy or download demo **Book_demo.md**)
+4. Create a book note. (You can copy or download demo **Omniscient Reader's Viewpoint.md**)
 ```
 ---
 tags:
@@ -61,7 +61,7 @@ cssclasses:
 
 ```
 Expected result: ![image|200](https://github.com/user-attachments/assets/59523ea8-2c90-4505-9723-346487332ce6)
-5. Create new note with Dataview query. Below a demo dataview from screenshots.  (You can copy or download demo **Library_demo.md**)
+5. Create new note with Dataview query. Below a demo dataview from screenshots.  (You can copy or download demo **Cards view.md**)
 
 ```
 ```dataview
@@ -108,10 +108,12 @@ Here are placed some basic styles to your convenience. Lets check a few lines
 ![image|200](https://github.com/user-attachments/assets/b44bd89d-7230-4740-94b1-dc5eb0dc3b8d)
 2. `--cards-border-color: purple;` and `--cards-progressbar-color: lightgreen;`
 ![image"200](https://github.com/user-attachments/assets/924e9c80-b8d3-4f6f-b0e9-441b33e18f6c)
+3. `--cards--header-lines-hide: 2;` and `--cards-lines-hide: 2;`. These styles allow to say how many rows we want to see before it's trucated **if it's too long**. E.g. we have value 1 in first property, it means if link text is too long for 1 row then last symbols are replaced with `...` at the end 
+Original link text ![image](https://github.com/user-attachments/assets/e897e1c1-de84-43f6-a359-aba743ca4fa1)
+Long text with 2+ rows ![image](https://github.com/user-attachments/assets/b25ef864-3f99-46b2-b44a-053261d182fb)
+Long text with 1+ rows ![image](https://github.com/user-attachments/assets/8f448762-c740-482c-9c1c-fbc34b4ce64f)
 
-
-
-
+> I tried to name styles very understandable so it's easy to find needed one. Good luck.
 
 
 # To-Do
