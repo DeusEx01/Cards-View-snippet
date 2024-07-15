@@ -3,4 +3,4 @@ This is a snippet for alternative display style of `Dataview` results. Most appr
 ![image](https://github.com/user-attachments/assets/77f006cc-be0b-4f69-ab98-bfcea79f863f)
 
 # To-Do
-- [ ] Make adaptive cards for different resolutions(devices)
+- [ ] Make adaptive cards for different resolutions(devices) e.g. @media (max-width: 400pt)
