@@ -1,4 +1,3 @@
-````
 ---
 cssclasses:
   - cards
@@ -21,5 +20,3 @@ timestamp)/number(
 volume)*100) + "%" + ")" as Progress
 FROM #book
 ```
-````
-
