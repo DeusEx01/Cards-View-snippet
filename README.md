@@ -1,5 +1,9 @@
 # Cards-View-snippet
 This is a snippet for alternative display style of `Dataview` results. Most appropriate case of using is creating personal libraries.
+Here is a demo result that I share (default theme/styles):
+![image](https://github.com/user-attachments/assets/77e3e711-08f6-40ed-a3f2-544fb7c2bc70)
+
+And here is my personal tweaked snippet:
 ![image](https://github.com/user-attachments/assets/77f006cc-be0b-4f69-ab98-bfcea79f863f)
 
 # How it works
