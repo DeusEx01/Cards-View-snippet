@@ -106,6 +106,12 @@ There are also some additional values
 3. cards-readline-off (breaks limits of option Readable line length so you can see library with full width. ![image](https://github.com/user-attachments/assets/dfb2fbcf-96e3-4fa9-acae-151f33329338)
 Before: ![image|200](https://github.com/user-attachments/assets/c99be477-49f4-46a5-8eda-e1af3d066bcb)
 After: ![image|200](https://github.com/user-attachments/assets/beb0ef09-b99e-401f-80b9-125578e9e8db)
+4. Animation on hover. Add `cards-hover` to `cssclasses` property.
+
+![ezgif-4-b2241b8d3f](https://github.com/user-attachments/assets/785c99f4-737e-47a8-9393-a1dadcd73ec1)
+
+
+
 That's it for basic things.
 
 ## Now if we want to change colors, border-width, width of cards, gaps between cards and so on, follow next steps:
