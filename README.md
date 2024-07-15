@@ -2,7 +2,7 @@
 This is a snippet for alternative display style of `Dataview` results. Most appropriate case of using is creating personal libraries.
 Here is a demo result that I share (default theme/styles):
 ![image](https://github.com/user-attachments/assets/3849bd1b-e69b-45cb-97a7-fc470b0b5231)
-Some popular theme with the snippet(AnuPpuccin, Vauxhall, 80s Neon, Subtlegold)
+#### Some popular theme with the snippet(AnuPpuccin, Vauxhall, 80s Neon, Subtlegold)
 ![image](https://github.com/user-attachments/assets/a78f31dc-cc22-4cc8-a1d4-bdb9d0c31766)
 ![image](https://github.com/user-attachments/assets/e1f3cbc4-9186-49f1-abeb-4b198934f7e4)
 ![image](https://github.com/user-attachments/assets/df12c7ad-49c8-484f-9701-b003b5d0c3db)
