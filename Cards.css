@@ -54,6 +54,9 @@ body {
 
   --cards--header-lines-hide: 2;
   --cards-lines-hide: 2;
+
+  --cards-hover-animation-time: .15s;
+  --cards-hover-zoom: 101%; 
 }
 
 /*#endregion*/
@@ -92,6 +95,17 @@ body {
   margin: 0;
 
   color: var(--cards-font-color);
+
+  transition: all var(--cards-hover-animation-time) linear;
+}
+
+.cards.cards-hover table.dataview>tbody>tr:hover {
+  border: var(--cards-border-width) solid var(--interactive-accent);
+  box-shadow: 0 4px 6px 0px var(--interactive-accent), 0 1px 3px 1px var(--interactive-accent);
+  transform: scale(var(--cards-hover-zoom));
+  transition: all var(--cards-hover-animation-time) linear;
+  background-color: var(--background-primary) !important;
+  z-index: 99;
 }
 
 .cards table.dataview>tbody>tr>td {
