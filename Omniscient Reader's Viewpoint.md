@@ -1,3 +1,4 @@
+````
 ---
 tags:
   - book
@@ -20,10 +21,9 @@ units: chapters
 status: ongoing
 rate:
   - ★★★★★
-cover: "[[Pasted image 20240714173312.png]]"
+cover: https://dn-img-page.kakao.com/download/resource?kid=z48Gf/hyxJFaD6gv/vikqKckSp6ZduKfoKLH6Ik&amp;filename=th3
 cssclasses:
 ---
-![[Pasted image 20240714173312.png|300]]
 
 # ANNOTATION
 >Beautiful annotation would be placed here
@@ -36,3 +36,4 @@ cssclasses:
 
 # CHARACTERS
 1. Characters are characters
+````
