@@ -1,0 +1,88 @@
+/*#region INFO*/
+/*
+author: @DeusEx01
+version: 1.0.0
+If you like the snippet I'd appreciate if you star it on GitHub:
+https://github.com/DeusEx01/Cards-View-snippet/tree/main
+
+INSPIRED BY @kepano https://github.com/sponsors/kepano
+*/
+/*#endregion 
+Here you can find some styles for fast custom styles like color, width of border, width of cards e.t.c.
+*/
+body {
+  --cards-max-width: 1fr;
+  --cards-mobile-width: 120px;
+  --cards-image-height: 400px;
+  --cards-padding: 1.2em;
+  --cards-image-fit: contain;
+  --cards-aspect-ratio: auto;
+  --cards-columns: repeat(auto-fit, minmax(var(--cards-min-width), var(--cards-max-width))); 
+
+  /*What you can suggest with no fear in your heart*/
+  --cards-min-width: 200px;
+  --cards-border-width: 1px;
+  --cards-border-color: var(--divider-color);
+  --cards-background: transparent;
+}
+:root {
+
+
+}
+/*#region Make card view*/
+.cards table.dataview tbody {
+  clear: both;
+  padding: 15px;
+  display: grid;
+	justify-items: center;
+  grid-template-columns: var(--cards-columns);
+  grid-column-gap: 25px;
+  grid-row-gap: 0.75rem; }
+
+.cards table.dataview thead {
+  display: none;
+}
+/*#endregion*/
+/*#region Tweak every card itself*/
+.cards table.dataview > tbody > tr {
+  display: flex;
+  flex-direction: column;
+
+  border: var(--cards-border-width) solid var(--cards-border-color);
+  border-radius: 6px;
+  background-color: var(--cards-background);
+  overflow: hidden;
+  width: var(--cards-min-width);
+
+  padding: 0 0 calc(var(--cards-padding)/3) 0;
+	margin: 0;
+  
+}
+.cards table.dataview > tbody > tr > td {
+  height: 50px;
+}
+.cards table.dataview > tbody > tr > td:not(.cards table.dataview > tbody > tr > td:last-child) {
+  border-bottom: 1px solid var(--cards-border-color);
+  text-align: center;
+}
+
+.cards table.dataview tbody > tr > td:first-child {
+  height: 260px;
+  text-align: center;
+}
+
+.cards table.dataview tbody > tr > td img {
+  height: 100%;
+}
+/*#endregion*/
+/*#region Support classes*/
+  
+/*#endregion*/
+/*Text align left*/
+.cards.text-left table.dataview > tbody > tr > td:not(.cards table.dataview tbody > tr > td:first-child){
+  text-align: left;
+}
+/*Text align right*/
+.cards.text-right table.dataview > tbody > tr > td:not(.cards table.dataview tbody > tr > td:first-child){
+  text-align: right;
+}
