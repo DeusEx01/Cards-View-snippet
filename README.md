@@ -153,3 +153,4 @@ Long text with 1+ rows
 - [ ] Make individual `.cards-icon` styles.
 - [ ] Collect feedbacks and make a list of needed fixes/bugs.
 - [ ] Check popular themes and make better compability.
+- [ ] Think about merging with MetaData + Dataview + Snippet
