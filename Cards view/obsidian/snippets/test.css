@@ -1,6 +1,0 @@
-.dataview.table-view-table :is(td, th) {
-  border: 1px solid;
-} 
-.dataview.table-view-table th {
-  border-bottom: 1px;
-}
