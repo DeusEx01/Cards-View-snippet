@@ -1,0 +1,10 @@
+{
+  "enabledCssSnippets": [
+    "cards test",
+    "cards"
+  ],
+  "cssTheme": "Vauxhall",
+  "accentColor": "",
+  "theme": "obsidian",
+  "showViewHeader": false
+}
