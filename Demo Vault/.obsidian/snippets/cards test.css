@@ -1,0 +1,409 @@
+/*#region INFO*/
+/*
+author: @DeusEx01
+version: 1.0.0
+If you liked the snippet I'd appreciate if you ✰✰✰✰✰ it on GitHub:
+https://github.com/DeusEx01/Cards-View-snippet/tree/main
+
+INSPIRED BY @kepano https://github.com/sponsors/kepano
+*/
+/*#endregion*/
+
+/*#region CUSTOM CHANGES*/
+/*Here you can find some styles for fast custom changes like color, width of border, width of cards, color of progress bar e.t.c.*/
+body {
+  --cards-max-width: 1fr;
+  --cards-mobile-width: 120px;
+  --cards-padding: 1.2em;
+  --cards-aspect-ratio: auto;
+  --cards-columns: repeat(auto-fit, minmax(var(--cards-min-width), var(--cards-max-width)));
+
+  /*What you can change with no fear in your heart*/
+  --cards-min-width: 200px;
+  --cards-row-height: 50px;
+  --cards-rows-horizontal-alignment: center;
+  --cards-rows-vertical-alignment: center;
+  --cards-background: transparent;
+  --cards-border-width: 1px;
+  --cards-border-color: var(--divider-color);
+  --cards-border-radius: 5px;
+
+  --cards-columns-gap: 5px;
+  --cards-row-gap: calc(var(--cards-columns-gap) * 1.5);
+
+  --cards-image-height: 260px;
+  --cards-image-fit: cover;
+  --cards-image-zoom: 100%;
+  --cards-image-padding: 0px;
+
+
+
+
+  --cards-title-link-font-color: var(--link-color);
+  --cards-title-link-font-size: 15px;
+  --cards-title-link-font-weight: unset;
+
+  --cards-font-color: unset;
+  --cards-font-size: 13px;
+  --cards-font-weight: 700;
+
+  --cards-list-font-size: unset; 
+  --cards-list-font-weight: unset;
+
+  --cards-progressbar-font-size: 10px;
+  --cards-progressbar-color: var(--interactive-accent);
+
+  --cards-left-icon: "~";
+  --cards-right-icon: "~";
+
+  --cards--header-lines-hide: 2;
+  --cards-lines-hide: 2;
+
+  --cards-hover-animation-time: .15s;
+  --cards-hover-zoom: 101%; 
+}
+
+/*#endregion*/
+
+/*#region CARD VIEW*/
+.cards table.dataview tbody {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: var(--cards-columns);
+  grid-column-gap: var(--cards-columns-gap);
+  grid-row-gap: var(--cards-row-gap);
+  justify-items: center;
+
+  clear: both;
+}
+
+.cards table.dataview thead {
+  display: none;
+}
+
+/*#endregion*/
+
+/*#region CARDS*/
+/* .cards table.dataview>tbody>tr {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  border: var(--cards-border-width) solid var(--cards-border-color);
+  border-radius: var(--cards-border-radius);
+  background-color: var(--cards-background);
+  background: linear-gradient(0deg, rgba(40,44,52,1) 0%, rgba(17,0,32,.5) 100%);
+  overflow: hidden;
+  width: var(--cards-min-width);
+
+  padding: 0 0 calc(var(--cards-padding)/3) 0;
+  margin: 0;
+
+  color: var(--cards-font-color);
+
+  transition: all var(--cards-hover-animation-time) linear;
+} */
+
+/* .cards.cards-hover table.dataview>tbody>tr:hover {
+  border: var(--cards-border-width) solid var(--interactive-accent);
+  box-shadow: 0 4px 6px 0px var(--interactive-accent), 0 1px 3px 1px var(--interactive-accent);
+  transform: scale(var(--cards-hover-zoom));
+  transition: all var(--cards-hover-animation-time) linear;
+  z-index: 99;
+} */
+.cards table.dataview>tbody>tr {
+    margin: auto;
+    padding: 2em;
+    border-radius: 1em;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    text-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    transform: perspective(500px);
+    transform-style: preserve-3d;
+  }
+
+.cards table.dataview>tbody>tr>td {
+  text-align: center;
+}
+
+.cards table.dataview>tbody>tr>td:not(
+.cards table.dataview > tbody > tr > td:last-child,
+.cards table.dataview > tbody > tr > td:has(img)) {
+  height: var(--cards-row-height);
+  font-size: var(--cards-font-size);
+  font-weight: var(--cards-font-weight);
+}
+
+.cards table.dataview>tbody>tr>td:not(.cards table.dataview > tbody > tr > td:last-child, .cards table.dataview > tbody > tr > td:has(img), .cards table.dataview > tbody > tr > td:nth-child(2):has(a)) {
+  display: flex;
+  justify-content: var(--cards-rows-horizontal-alignment);
+  align-items: var(--cards-rows-vertical-alignment);
+}
+
+.cards table.dataview>tbody>tr>td:not(.cards table.dataview > tbody > tr > td:last-child) {
+  border-bottom: 1px solid var(--cards-border-color);
+}
+
+.cards table.dataview tbody>tr>td:has(img) {
+  display: flex;
+  justify-content: center;
+
+  padding: var(--cards-image-padding);
+
+  height: var(--cards-image-height);
+  text-align: center;
+
+}
+
+.cards table.dataview tbody>tr>td:nth-child(2):has(a) a{
+  display: -webkit-box;
+  -webkit-line-clamp: var(--cards--header-lines-hide);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 100%;
+
+  text-decoration: none;
+  color: var(--cards-title-link-font-color);
+  font-size: var(--cards-title-link-font-size);
+  font-weight: var(--cards-title-link-font-weight);
+}
+
+.cards table.dataview>tbody>tr>td>span:first-child {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--cards-lines-hide);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  width: 100%;
+}
+
+.cards table.dataview tbody>tr>td:has(img) img {
+  /* height: var(--cards-image-height); */
+  /* height: 100%; */
+  object-fit: var(--cards-image-fit);
+  width: 100%;
+  transform: scale(var(--cards-image-zoom));
+  border-radius: 5px; /*TO ADD VAR*/
+}
+
+/*#endregion*/
+
+/*#region SUPPORT CLASSES*/
+
+
+/*Text align left*/
+.cards.text-left table.dataview>tbody>tr>td:not(
+  .cards table.dataview tbody > tr > td:has(img)) {
+  text-align: left;
+}
+
+/*Text align right*/
+.cards.text-right table.dataview>tbody>tr>td:not(.cards table.dataview tbody > tr > td:first-child) {
+  text-align: right;
+}
+
+/*Readable line width fixing*/
+.cards.cards-readline-off.markdown-preview-view.is-readable-line-width .markdown-preview-sizer,
+.cards.cards-readline-off.markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer,
+.cards.cards-readline-off.markdown-source-view.mod-cm6.is-readable-line-width .cm-content {
+  margin: auto auto;
+}
+
+/*Property names and decorations*/
+.cards-icon {
+  font-size: 10px;
+  font-weight: 300;
+  display: block;
+}
+
+.cards-icon::before {
+  content: var(--cards-left-icon);
+}
+
+.cards-icon::after {
+  content: var(--cards-right-icon);
+}
+
+/*#endregion*/
+
+/*#region LISTS*/
+.cards table.dataview tbody>tr>td>ul {
+  list-style: none;
+  display: -webkit-box;
+  -webkit-line-clamp: var(--cards-lines-hide);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  font-size: var(--cards-list-font-size);
+  font-weight: var(--cards-list-font-weight);
+}
+
+.cards table.dataview tbody>tr>td>ul>li {
+  display: inline;
+  margin: 0;
+}
+
+.cards table.dataview tbody>tr>td>ul>li:not(.cards table.dataview tbody>tr>td>ul>li:last-child)::after {
+  content: ", ";
+  display: inline;
+}
+
+/*#endregion*/
+
+/*#region PROGRESS BAR*/
+
+
+.cards.markdown-preview-view progress,
+.cards.markdown-rendered progress,
+.cards.markdown-source-view.is-live-preview progress {
+  display: block;
+  width: 100%;
+  height: 15px;
+}
+
+.cards progress::-webkit-progress-value {
+}
+
+.cards table.dataview tbody>tr>td:last-child {
+  font-size: var(--cards-progressbar-font-size);
+  font-weight: var(--cards-font-weight);
+}
+
+/*#endregion*/
+
+/* @settings
+
+name: Cards snippet - DeusEx01
+id: a-unique-id
+settings:
+    - 
+        id: my-title
+        title: Cards
+        type: heading
+        level: 3
+    - 
+        id: cards-min-width
+        title: Width
+        type: variable-number
+        format: px
+        default: 200
+    - 
+        id: cards-row-height
+        title: Rows Height
+        type: variable-number
+        format: px
+        default: 50
+    - 
+        id: cards-background
+        title: Background Color
+        type: variable-color
+        format: rgb
+        default: rgb(0, 0, 0, 0)
+    - 
+        id: cards-columns-gap
+        title: Columns Gap
+        type: variable-number
+        format: px
+        default: 5
+    - 
+        id: cards-row-gap
+        title: Rows Gap
+        type: variable-number
+        format: px
+        default: 5
+    - 
+        id: cards-border-width
+        title: Border Width
+        type: variable-number
+        format: px
+        default: 1
+    - 
+        id: cards-border-color
+        title: Border Color
+        type: variable-color
+        format: hex
+        default: rgb(0, 0, 0, 0)
+    - 
+        id: cards-border-radius
+        title: Border Radius
+        type: variable-number
+        format: px
+        default: 5
+
+
+
+
+    - 
+        id: cards-content
+        title: Cards Content
+        type: heading
+        level: 3
+    - 
+        id: title-link
+        title: Title
+        description: Title link that is a `file.link` in Dataview.
+        type: heading
+        level: 4
+    - 
+        id: cards-title-link-font-color
+        title: Title Color
+        type: variable-color
+        format: rgb
+        default: var(--divider-color)
+    - 
+        id: cards-title-link-font-size
+        title: Title Font Size
+        type: variable-number
+        format: px
+        default: 15
+
+
+
+    - 
+        id: image
+        title: Image(cover)
+        type: heading
+        level: 4
+    - 
+        id: cards-image-height
+        title: Height
+        description: Height of an image.
+        type: variable-number
+        format: px
+        default: 260
+    - 
+        id: cards-image-padding
+        title: Padding
+        description: A container's paddings where image(cover) is stored
+        type: variable-number
+        format: px
+        default: 0
+    - 
+        id: cards-image-fit
+        title: Fill or Fit image inside container
+        description: Allows to change display style of image. Either is fills up a space or trying to keep its ration and fit box
+        type: variable-select
+        format: px
+        default: cover
+        options:
+          - contain
+          - cover
+          - fill
+          - scale-down
+          - none
+    - 
+        id: cards-image-zoom
+        title: Zoom
+        description: How to zoom image
+        type: variable-number-slider
+        format: "%"
+        min: 50
+        max: 300
+        default: 100
+
+*/
+
+
+
+
+

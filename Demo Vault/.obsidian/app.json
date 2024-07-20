@@ -1,0 +1,14 @@
+{
+  "readableLineLength": false,
+  "livePreview": false,
+  "showRibbon": false,
+  "defaultViewMode": "preview",
+  "strictLineBreaks": false,
+  "promptDelete": false,
+  "foldIndent": true,
+  "foldHeading": true,
+  "showLineNumber": false,
+  "showIndentGuide": true,
+  "rightToLeft": false,
+  "showInlineTitle": true
+}
