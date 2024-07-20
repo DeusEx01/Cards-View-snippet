@@ -10,53 +10,81 @@ INSPIRED BY @kepano https://github.com/sponsors/kepano
 /*#endregion*/
 
 /*#region CUSTOM CHANGES*/
-/*Here you can find some styles for fast custom changes like color, width of border, width of cards, color of progress bar e.t.c.*/
+/* PAY ATTENTION! There is a plugin called 'Style Settings'. Download it for better custom changes experience!
+OR here you can manually find some styles for custom changes like color, width of border, width of cards, color of progress bar e.t.c.
+*/
 body {
-  --cards-max-width: 1fr;
   --cards-mobile-width: 120px;
-  --cards-padding: 1.2em;
-  --cards-image-fit: contain;
+  /*Mobile is planned*/
+  --cards-padding: 0;
   --cards-aspect-ratio: auto;
+  /*In development for flex-width*/
+  --cards-max-width: 1fr;
   --cards-columns: repeat(auto-fit, minmax(var(--cards-min-width), var(--cards-max-width)));
-
+  
   /*What you can change with no fear in your heart*/
-  --cards-min-width: 200px;
-  --cards-row-height: 50px;
+  
+  --cards-min-width: 240px;
+  --cards-rows-height: 50px;
   --cards-background: transparent;
-
+  --cards-background-image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/660px-No-Image-Placeholder.svg.png";
   --cards-columns-gap: 5px;
-  --cards-row-gap: calc(var(--cards-columns-gap) * 1.5);
-
-  --cards-image-height: 260px;
-  --cards-image-zoom: 100%;
-
-
+  --cards-row-gap: 5px;
   --cards-border-width: 1px;
   --cards-border-color: var(--divider-color);
+  --cards-border-radius: 10px;
 
-  --cards-link-font-color: var(--link-color);
-  --cards-link-font-size: unset;
-  --cards-link-font-weight: unset;
+  --cards-title-link-rows-before-clip: 2;
+  --cards-title-link-font-color: var(--link-color);
+  --cards-title-link-font-size: 15px;
+  --cards-title-link-font-weight: 500;
+  --cards-title-link-horizontal-alignment: center;
+  --cards-title-link-vertical-alignment: center;
+  --cards-title-link-row-height: 50px;
+  --cards-title-link-vertical-padding: 5px;
+  --cards-title-link-horizontal-padding: 5px;
 
-  --cards-font-color: unset;
-  --cards-font-size: 15px;
-  --cards-font-weight: 500;
-  /*from 100 to 950 values*/
+  --cards-image-height: 290px;
+  --cards-image-padding: 0px;
+  --cards-image-fit: cover;
+  --cards-image-zoom: 100%;
+  --cards-image-radius: 0px;
 
-  --cards-list-font-size: unset; 
-  --cards-list-font-weight: unset;
+  --cards-rows-font-color: unset;
+  --cards-rows-font-size: 13px;
+  --cards-rows-font-weight: 500;
+  --cards-rows-horizontal-alignment: center;
+  --cards-rows-vertical-alignment: center;
+  --cards-rows-vertical-padding: 5px;
+  --cards-rows-horizontal-padding: 5px;
+  --cards-rows-before-clip: 2;
 
-  --cards-progressbar-font-size: 10px;
   --cards-progressbar-color: var(--interactive-accent);
+  --cards-progressbar-width: 100%;
+  --cards-progressbar-height: 15px;
+  --cards-progressbar-border-radius: 10px;
+  --cards-progressbar-font-color: unset;
+  --cards-progressbar-font-size: 10px;
+  --cards-progressbar-font-weight: 500;
+  --cards-progressbar-vertical-padding: 2px;
+  --cards-progressbar-horizontal-padding: 2px;
+  --cards-progressbar-horizontal-alignment: center;
 
-  --cards-left-icon: "⍨";
-  --cards-right-icon: "⍨";
+  --cards-left-icon: ' • ';
+  --cards-right-icon: ' • ';
+  --cards-property-font-color: unset;
+  --cards-property-font-size: 10px;
+  --cards-property-font-weight: 100;
 
-  --cards--header-lines-hide: 2;
-  --cards-lines-hide: 2;
+
 
   --cards-hover-animation-time: .15s;
-  --cards-hover-zoom: 101%; 
+  --cards-hover-zoom: 101%;
+  --cards-hover-shadow-color: var(--interactive-accent);
+
+  --cards-list-font-size: unset;
+  --cards-list-font-weight: unset;
+
 }
 
 /*#endregion*/
@@ -86,7 +114,7 @@ body {
   align-items: stretch;
 
   border: var(--cards-border-width) solid var(--cards-border-color);
-  border-radius: 6px;
+  border-radius: var(--cards-border-radius);
   background-color: var(--cards-background);
   overflow: hidden;
   width: var(--cards-min-width);
@@ -94,70 +122,89 @@ body {
   padding: 0 0 calc(var(--cards-padding)/3) 0;
   margin: 0;
 
-  color: var(--cards-font-color);
-
   transition: all var(--cards-hover-animation-time) linear;
 }
 
-.cards.cards-hover table.dataview>tbody>tr:hover {
+.cards table.dataview>tbody>tr:hover {
   border: var(--cards-border-width) solid var(--interactive-accent);
-  box-shadow: 0 4px 6px 0px var(--interactive-accent), 0 1px 3px 1px var(--interactive-accent);
+  box-shadow: 0 4px 6px 0px var(--cards-hover-shadow-color), 0 1px 3px 1px var(--cards-hover-shadow-color);
   transform: scale(var(--cards-hover-zoom));
   transition: all var(--cards-hover-animation-time) linear;
-  background-color: var(--background-primary) !important;
   z-index: 99;
+  background-color: var(--cards-background);
 }
 
-.cards table.dataview>tbody>tr>td {
-  text-align: center;
-}
 
-.cards table.dataview>tbody>tr>td:not(.cards table.dataview > tbody > tr > td:last-child, .cards table.dataview > tbody > tr > td:first-child) {
-  height: var(--cards-row-height);
-  font-size: var(--cards-font-size);
-  font-weight: var(--cards-font-weight);
+.cards table.dataview>tbody>tr>td:not(
+  .cards table.dataview > tbody > tr > td:last-child:has(progress), 
+  .cards table.dataview > tbody > tr > td:has(img), 
+  .cards table.dataview > tbody > tr > td:nth-child(2):has(a)
+  ) {
+  display: flex;
+  justify-content: center;
+  align-items: var(--cards-rows-vertical-alignment);
+
+  height: var(--cards-rows-height);
+  font-size: var(--cards-rows-font-size);
+  font-weight: var(--cards-rows-font-weight);
+  color: var(--cards-rows-font-color);
+  text-align: var(--cards-rows-horizontal-alignment);
+  padding: var(--cards-rows-vertical-padding) var(--cards-rows-horizontal-padding);
 }
 
 .cards table.dataview>tbody>tr>td:not(.cards table.dataview > tbody > tr > td:last-child) {
   border-bottom: 1px solid var(--cards-border-color);
 }
 
-.cards table.dataview tbody>tr>td:first-child {
+.cards table.dataview tbody>tr>td:has(img){
   display: flex;
   justify-content: center;
+
+  padding: var(--cards-image-padding);
 
   height: var(--cards-image-height);
   text-align: center;
 
 }
 
-.cards table.dataview tbody>tr>td a {
-  /*Adds `...` if link text is very long*/
+.cards table.dataview tbody>tr>td:nth-child(2):has(a){
+  height: var(--cards-title-link-row-height);
+  padding: var(--cards-title-link-vertical-padding) var(--cards-title-link-horizontal-padding);
+  display: flex;
+  align-items: var(--cards-title-link-vertical-alignment);
+}
+
+.cards table.dataview tbody>tr>td:nth-child(2):has(a) a {
   display: -webkit-box;
-  -webkit-line-clamp: var(--cards--header-lines-hide);
+  -webkit-line-clamp: var(--cards-title-link-rows-before-clip);
   -webkit-box-orient: vertical;
   overflow: hidden;
   height: 100%;
 
   text-decoration: none;
-  color: var(--cards-link-font-color);
-  font-size: var(--cards-link-font-size);
-  font-weight: var(--cards-link-font-weight);
+  color: var(--cards-title-link-font-color);
+  font-size: var(--cards-title-link-font-size);
+  font-weight: var(--cards-title-link-font-weight) !important;
+  text-align: var(--cards-title-link-horizontal-alignment);
 }
 
 .cards table.dataview>tbody>tr>td>span:first-child {
   display: -webkit-box;
-  -webkit-line-clamp: var(--cards-lines-hide);
+  -webkit-line-clamp: var(--cards-rows-before-clip);
   -webkit-box-orient: vertical;
   overflow: hidden;
+  width: 100%;
 }
-
-.cards table.dataview tbody>tr>td img {
-  height: var(--cards-image-height);
-  width: auto;
-  transform: scale(var(--cards-image-zoom))
+.cards table.dataview tbody>tr>td:has(span[alt])  {
+  height: var(--cards-image-height) !important;
 }
-
+.cards table.dataview tbody>tr>td:has(img) img {
+  object-fit: var(--cards-image-fit);
+  width: 100%;
+  height: 100%;
+  transform: scale(var(--cards-image-zoom));
+  border-radius: var(--cards-image-radius);
+}
 
 
 /*#endregion*/
@@ -165,29 +212,19 @@ body {
 /*#region SUPPORT CLASSES*/
 
 
-/*Text align left*/
-.cards.text-left table.dataview>tbody>tr>td:not(.cards table.dataview tbody > tr > td:first-child) {
-  text-align: left;
-}
-
-/*Text align right*/
-.cards.text-right table.dataview>tbody>tr>td:not(.cards table.dataview tbody > tr > td:first-child) {
-  text-align: right;
-}
-
 /*Readable line width fixing*/
 .cards.cards-readline-off.markdown-preview-view.is-readable-line-width .markdown-preview-sizer,
 .cards.cards-readline-off.markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer,
 .cards.cards-readline-off.markdown-source-view.mod-cm6.is-readable-line-width .cm-content {
-  max-width: 100% !important;
   margin: auto auto;
 }
 
 /*Property names and decorations*/
 .cards-icon {
-  font-size: 10px;
-  font-weight: 300;
+  font-size: var(--cards-property-font-size);
+  font-weight: var(--cards-property-font-weight);
   display: block;
+  color: var(--cards-property-font-color)
 }
 
 .cards-icon::before {
@@ -204,7 +241,7 @@ body {
 .cards table.dataview tbody>tr>td>ul {
   list-style: none;
   display: -webkit-box;
-  -webkit-line-clamp: var(--cards-lines-hide);
+  -webkit-line-clamp: var(--cards-rows-before-clip);
   -webkit-box-orient: vertical;
   overflow: hidden;
 
@@ -231,17 +268,424 @@ body {
 .cards.markdown-rendered progress,
 .cards.markdown-source-view.is-live-preview progress {
   display: block;
-  width: 100%;
-  height: 15px;
+  width: var(--cards-progressbar-width);
+  height: var(--cards-progressbar-height);
+  border-radius: var(--cards-progressbar-border-radius);
+  
+  margin: 5px auto;
+
 }
 
 .cards progress::-webkit-progress-value {
   background: var(--cards-progressbar-color) !important;
 }
 
-.cards table.dataview tbody>tr>td:last-child {
+.cards table.dataview tbody>tr>td:has(progress) {
   font-size: var(--cards-progressbar-font-size);
-  font-weight: var(--cards-font-weight);
+  font-weight: var(--cards-progressbar-font-weight);
+
+  padding: var(--cards-progressbar-vertical-padding) var(--cards-progressbar-horizontal-padding);
+  text-align: var(--cards-progressbar-horizontal-alignment);
+  color: var(--cards-progressbar-font-color)
 }
 
 /*#endregion*/
+
+/* @settings
+
+name: Cards snippet - DeusEx01
+id: a-unique-id
+settings:
+    - 
+        id: my-title
+        title: Cards
+        type: heading
+        level: 3
+    - 
+        id: cards-min-width
+        title: Width
+        type: variable-number
+        format: px
+        default: 240
+    - 
+        id: cards-rows-height
+        title: Rows Height
+        type: variable-number
+        format: px
+        default: 50
+    - 
+        id: cards-background
+        title: Background Color
+        type: variable-color
+        format: rgb
+        default: rgb(0, 0, 0, 0)
+    - 
+        id: cards-columns-gap
+        title: Columns Gap
+        type: variable-number
+        format: px
+        default: 5
+    - 
+        id: cards-row-gap
+        title: Rows Gap
+        type: variable-number
+        format: px
+        default: 5
+    - 
+        id: cards-border-width
+        title: Border Width
+        type: variable-number
+        format: px
+        default: 1
+    - 
+        id: cards-border-color
+        title: Border Color
+        type: variable-color
+        format: rgb
+        default: rgb(0, 0, 0, 0)
+    - 
+        id: cards-border-radius
+        title: Border Radius
+        type: variable-number
+        format: px
+        default: 10
+    - 
+        id: cards-hover-zoom
+        title: Hover Zoom
+        description: Hover Zoom Animation
+        type: variable-number
+        format: "%"
+        default: 101
+    - 
+        id: cards-hover-shadow-color
+        title: Hover Shadow Color
+        type: variable-color
+        format: rgb
+        default: rgb(0, 0, 0, 0)
+    - 
+
+        id: cards-content
+        title: Cards Content
+        type: heading
+        level: 3
+    - 
+        id: image
+        title: Image(cover)
+        description: Image that is your cover(poster) of card 
+        type: heading
+        level: 4
+    - 
+        id: cards-image-height
+        title: Height
+        description: Height of an image.
+        type: variable-number
+        format: px
+        default: 290
+    - 
+        id: cards-image-padding
+        title: Padding
+        description: A container's paddings where image(cover) is stored
+        type: variable-number
+        format: px
+        default: 0
+    - 
+        id: cards-image-fit
+        title: Image Fit
+        description: How image is stored in container. If you want to display full image size then choice 'contain'. If you want to fill-up container then choice 'cover'
+        type: variable-select
+        format: px
+        default: cover
+        options:
+          - contain
+          - cover
+          - fill
+          - scale-down
+          - none
+    - 
+        id: cards-image-zoom
+        title: Zoom
+        description: How to zoom image
+        type: variable-number-slider
+        format: "%"
+        min: 50
+        max: 300
+        default: 100
+    - 
+        id: cards-image-radius
+        title: Border Radius
+        description: Border radius of image itself. Could be useful when you use "Image Fit" = 'contain' with padding more than '0'
+        type: variable-number
+        format: px
+        default: 0
+
+
+
+    - 
+        id: title-link
+        title: Title
+        description: Title link that is a `file.link` in Dataview.
+        type: heading
+        level: 4
+    - 
+        id: cards-title-link-rows-before-clip
+        title: Rows Before Clip
+        description: Allows to define how many rows you want to see before it's clipped with `...` if there is no enough space in the row.
+        type: variable-number-slider
+        default: 2
+        min: 1
+        max: 10
+        step: 1
+    - 
+        id: cards-title-link-font-color
+        title: Title Color
+        type: variable-color
+        format: rgb
+        default: var(--divider-color)
+    - 
+        id: cards-title-link-font-size
+        title: Title Font Size
+        type: variable-number
+        format: px
+        default: 15
+    - 
+        id: cards-title-link-font-weight
+        title: Title Font Weight
+        type: variable-number-slider
+        default: 500
+        min: 100
+        max: 900
+        step: 100
+    - 
+        id: cards-title-link-horizontal-alignment
+        title: Horizontal Alignment
+        type: variable-select
+        format: px
+        default: center
+        options:
+          - left
+          - right
+          - center
+    - 
+        id: cards-title-link-vertical-alignment
+        title: Vertical Alignment
+        type: variable-select
+        format: px
+        default: center
+        options:
+          - start
+          - center
+          - end
+    - 
+        id: cards-title-link-row-height
+        title: Title Row Height
+        type: variable-number
+        format: px
+        default: 50
+    - 
+        id: cards-title-link-vertical-padding
+        title: Title Vertical Paddings
+        type: variable-number
+        format: px
+        default: 5
+    - 
+        id: cards-title-link-horizontal-padding
+        title: Title Horizontal Paddings
+        type: variable-number
+        format: px
+        default: 5
+    - 
+
+        id: rows-title
+        title: Rows
+        description: Here you can change rows (except note title, progress bar)
+        type: heading
+        level: 4
+    - 
+        id: cards-rows-before-clip
+        title: Rows Before Clip
+        description: Allows to define how many rows you want to see before it's clipped with `...` if there is no enough space in the row.
+        type: variable-number-slider
+        default: 2
+        min: 1
+        max: 10
+        step: 1
+    -
+        id: cards-rows-font-color
+        title: Font Color
+        type: variable-color
+        format: rgb
+        default: rgb(0, 0, 0, 0)
+    - 
+        id: cards-rows-font-size
+        title: Font Size
+        type: variable-number
+        format: px
+        default: 13
+    - 
+        id: cards-rows-font-weight
+        title: Font Weight
+        type: variable-number-slider
+        default: 500
+        min: 100
+        max: 900
+        step: 100
+    - 
+        id: cards-rows-horizontal-alignment
+        title: Horizontal Alignment
+        type: variable-select
+        format: px
+        default: center
+        options:
+          - left
+          - right
+          - center
+    - 
+        id: cards-rows-vertical-alignment
+        title: Vertical Alignment
+        type: variable-select
+        format: px
+        default: center
+        options:
+          - start
+          - center
+          - end
+    - 
+        id: cards-rows-vertical-padding
+        title: Vertical Paddings
+        type: variable-number
+        format: px
+        default: 5
+    - 
+        id: cards-rows-horizontal-padding
+        title: Horizontal Paddings
+        type: variable-number
+        format: px
+        default: 5
+    - 
+        id: property-name
+        title: Property Name Style
+        description: This is a Property name with icons `"<span " + "class='cards-icon'>" + "Series" + "</span>"` from demo template
+        type: heading
+        level: 5
+    -
+        id: cards-left-icon
+        title: Left Icon
+        description: Text used in bullet points
+        type: variable-text
+        default: •
+        quotes: true
+    - 
+        id: cards-right-icon
+        title: Right Icon
+        description: Text used in bullet points
+        type: variable-text
+        default: •
+        quotes: true
+    - 
+        id: cards-property-font-color
+        title: Property Name Font Color
+        type: variable-color
+        format: rgb
+        default: rgb(0, 0, 0, 0)
+    - 
+        id: cards-property-font-size
+        title: Font Size
+        type: variable-number
+        format: px
+        default: 10
+    - 
+        id: cards-property-font-weight
+        title: Font Weight
+        type: variable-number-slider
+        default: 100
+        min: 100
+        max: 900
+        step: 100
+    - 
+
+        id: progress-bar
+        title: Progress Bar
+        description: Change progress bar
+        type: heading
+        level: 4
+    - 
+        id: cards-progressbar-color
+        title: Progress Bar Color
+        type: variable-color
+        format: rgb
+        default: var(--interactive-accent)
+    - 
+        id: cards-progressbar-width
+        title: Progress Bar Width
+        type: variable-number
+        format: "%"
+        default: 100
+    - 
+        id: cards-progressbar-height
+        title: Progress Bar Height
+        type: variable-number
+        format: px
+        default: 15
+    - 
+        id: cards-progressbar-font-color
+        title: Font Color
+        type: variable-color
+        format: rgb
+        default: rgb(0, 0, 0, 0)
+    - 
+        id: cards-progressbar-font-size
+        title: Font Size
+        type: variable-number
+        format: px
+        default: 10
+    - 
+        id: cards-progressbar-font-weight
+        title: Font Weight
+        type: variable-number-slider
+        default: 500
+        min: 100
+        max: 900
+        step: 100
+    - 
+        id: cards-progressbar-horizontal-alignment
+        title: Horizontal Alignment
+        type: variable-select
+        format: px
+        default: center
+        options:
+          - left
+          - right
+          - center
+    - 
+        id: cards-progressbar-vertical-padding
+        title: Vertical Paddings
+        type: variable-number
+        format: px
+        default: 5
+    - 
+        id: cards-progressbar-horizontal-padding
+        title: Horizontal Paddings
+        type: variable-number
+        format: px
+        default: 5
+    - 
+        id: cards-progressbar-width
+        title: Progress Bar Width
+        type: variable-number
+        format: "%"
+        default: 100
+    - 
+        id: cards-progressbar-height
+        title: Progress Bar Height
+        type: variable-number
+        format: px
+        default: 15
+    - 
+        id: cards-progressbar-border-radius
+        title: Progress Bar Border Radius
+        type: variable-number
+        format: px
+        default: 10
+    - 
+    
+*/
