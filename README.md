@@ -31,91 +31,33 @@ First of all this snippet was inspired my Minimal theme cards. It wark in with D
 2. Download **Cards.css** file and insert it in your folder e.g. `C:\Users\User\Obsidian_folder\.obsidian\snippets\Cards.css`
 3. Enable snippet in `Settings > Appearance > CSS snippets`
 4. Create a book note. (You can copy or download demo **Omniscient Reader's Viewpoint.md**)
-```
----
-tags:
-  - book
-aliases:
-  - 전지적 독자 시점
-year: "2018"
-author:
-  - Sing-Shong
-series: ORV
-series_part: "1"
-started: 2023-10-10
-finished: 
-genres:
-  - Fiction
-  - Fantasy
-  - Novell
-volume: "551"
-timestamp: "67"
-units: chapters
-status: ongoing
-rate:
-  - ★★★★★
-cover: https://dn-img-page.kakao.com/download/resource?kid=z48Gf/hyxJFaD6gv/vikqKckSp6ZduKfoKLH6Ik&amp;filename=th3
-cssclasses:
----
-
-
-# ANNOTATION
->Beautiful annotation would be placed here
-
-# QUOTES
-1. Don't forget your quotes
-
-# NOTES
->Notes is a key to remembering everything
-
-# CHARACTERS
-1. Characters are characters
-
-```
+5. 
 Expected result: ![image|200](https://github.com/user-attachments/assets/59523ea8-2c90-4505-9723-346487332ce6)
-5. Create new note with Dataview query. Below a demo dataview from screenshots.  (You can copy or download demo **Cards view.md**)
 
-```
-```dataview
-TABLE WITHOUT ID choice(contains(cover, "http"), ("![coverimg|100](" + cover + ")"), embed(link(cover, "150")) ) as "Cover",
-file.link,
-"<span " + "class='cards-icon'>" + "Series" + "</span>"  + series + " (" + series_part + ")" as Series,
-"<span " + "class='cards-icon'>" + "Author" + "</span>" + author as Author,
-"<span " + "class='cards-icon'>" + "Started" + "</span>" + started as Started,
-genres as Genres,
-"<progress max=" + 
-volume + " value=" + number(
-timestamp) + "> </progress> "  + number(
-timestamp) + " of " + number(
-volume) + " " + units + " (" +round(number(
-timestamp)/number(
-volume)*100) + "%" + ")" as Progress
-FROM #book
-```
+7. Create new note with Dataview query. Below a demo dataview from screenshots.  (You can copy or download demo **Cards view.md**)
 Expected result: ![image|200](https://github.com/user-attachments/assets/91c4aad7-1336-4083-8e0f-917e6e4f59bf)
 Now it's done and you can see a default cards view.
 
 # Usage
+## **DOWNLOAD "Style Settings plugin"** for better experience!
 Now it's time to change cards to your taste.
 
 There are some basic tweaks, that we can apply using YAML property `cssclasses`. In YAML property `cssclasses`, by default if you downloaded demo is stored 1 value `cards`. It enables the whole snippet on specific note.
 ![image|200](https://github.com/user-attachments/assets/556ce3c8-0cba-402c-a5cd-6387c597da49)
 There are also some additional values
-1. text-left (text aligns to left)
-2. text-right (text aligns to right)
+1. As mentioned above download **Style Settings** plugin. It has a lot a settings, so you can find your own style.
+2. 
+![image](https://github.com/user-attachments/assets/d1ffc0f5-e98c-43e3-930d-023e8a744b7a)
+
 3. cards-readline-off (breaks limits of option Readable line length so you can see library with full width. ![image](https://github.com/user-attachments/assets/dfb2fbcf-96e3-4fa9-acae-151f33329338)
 Before: ![image|200](https://github.com/user-attachments/assets/c99be477-49f4-46a5-8eda-e1af3d066bcb)
 After: ![image|200](https://github.com/user-attachments/assets/beb0ef09-b99e-401f-80b9-125578e9e8db)
-4. Animation on hover. Add `cards-hover` to `cssclasses` property.
-
-![ezgif-4-b2241b8d3f](https://github.com/user-attachments/assets/785c99f4-737e-47a8-9393-a1dadcd73ec1)
-
 
 
 That's it for basic things.
 
-## Now if we want to change colors, border-width, width of cards, gaps between cards and so on, follow next steps:
-1. Find and open downloaded `Cards.css` snippet with any code redactor (I use a VS code)
+## **DOWNLOAD "Style Settings plugin"** for better experience!
+1. Find and open downloaded `Cards.css` snippet with any code redactor (I use a **VS code** app)
 2. Scroll down to 22nd line ![image](https://github.com/user-attachments/assets/51562121-fafc-4f1b-9e3d-2a0c166954dd)
 
 ## Here are placed some basic styles to your convenience. Lets check a few lines
@@ -150,7 +92,7 @@ Long text with 1+ rows
 
 # To-Do
 - [ ] Make adaptive cards for different resolutions(devices) e.g. @media (max-width: 400pt)
-- [ ] Make individual `.cards-icon` styles.
+- [x] Make individual `.cards-icon` styles.
 - [ ] Collect feedbacks and make a list of needed fixes/bugs.
-- [ ] Check popular themes and make better compability.
+- [x] Check popular themes and make better compability.
 - [ ] Think about merging with MetaData + Dataview + Snippet
