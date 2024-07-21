@@ -14,15 +14,12 @@ INSPIRED BY @kepano https://github.com/sponsors/kepano
 OR here you can manually find some styles for custom changes like color, width of border, width of cards, color of progress bar e.t.c.
 */
 body {
-  --cards-mobile-width: 120px;
-  /*Mobile is planned*/
+/*#region Desktop Styles*/
   --cards-padding: 0;
   --cards-aspect-ratio: auto;
   /*In development for flex-width*/
   --cards-max-width: 1fr;
   --cards-columns: repeat(auto-fit, minmax(var(--cards-min-width), var(--cards-max-width)));
-  
-  /*What you can change with no fear in your heart*/
   
   --cards-min-width: 240px;
   --cards-rows-height: 50px;
@@ -84,7 +81,73 @@ body {
 
   --cards-list-font-size: unset;
   --cards-list-font-weight: unset;
+  /*#endregion*/  
+/*#endregion*/
 
+/*#region Mobile Styles*/
+--cards-mobile-padding: 0;
+--cards-mobile-aspect-ratio: auto;
+--cards-mobile-max-width: 1fr;
+--cards-mobile-columns: repeat(auto-fit, minmax(var(--cards-mobile-min-width), var(--cards-mobile-max-width)));
+
+--cards-mobile-min-width: 150px;
+--cards-mobile-rows-height: 40px;
+--cards-mobile-background: transparent;
+--cards-mobile-background-image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/660px-No-Image-Placeholder.svg.png";
+--cards-mobile-columns-gap: 3px;
+--cards-mobile-row-gap: 3px;
+--cards-mobile-border-width: 1px;
+--cards-mobile-border-color: var(--divider-color);
+--cards-mobile-border-radius: 10px;
+
+--cards-mobile-title-link-rows-before-clip: 2;
+--cards-mobile-title-link-font-color: var(--link-color);
+--cards-mobile-title-link-font-size: 12px;
+--cards-mobile-title-link-font-weight: 700;
+--cards-mobile-title-link-horizontal-alignment: center;
+--cards-mobile-title-link-vertical-alignment: center;
+--cards-mobile-title-link-row-height: 40px;
+--cards-mobile-title-link-vertical-padding: 5px;
+--cards-mobile-title-link-horizontal-padding: 5px;
+
+--cards-mobile-image-height: 160px;
+--cards-mobile-image-padding: 0;
+--cards-mobile-image-fit: cover;
+--cards-mobile-image-zoom: 100%;
+--cards-mobile-image-radius: 0;
+
+--cards-mobile-rows-font-color: unset;
+--cards-mobile-rows-font-size: 10px; 
+--cards-mobile-rows-font-weight: 700;
+--cards-mobile-rows-horizontal-alignment: center;
+--cards-mobile-rows-vertical-alignment: center;
+--cards-mobile-rows-vertical-padding: 5px;
+--cards-mobile-rows-horizontal-padding: 5px;
+--cards-mobile-rows-before-clip: 2;
+
+--cards-mobile-progressbar-color: var(--interactive-accent);
+--cards-mobile-progressbar-width: 100%;
+--cards-mobile-progressbar-height: 10px;
+--cards-mobile-progressbar-border-radius: 10px;
+--cards-mobile-progressbar-font-color: unset;
+--cards-mobile-progressbar-font-size: 10px;
+--cards-mobile-progressbar-font-weight: 500;
+--cards-mobile-progressbar-vertical-padding: 2px;
+--cards-mobile-progressbar-horizontal-padding: 5px;
+--cards-mobile-progressbar-horizontal-alignment: center;
+
+--cards-mobile-left-icon: ' • ';
+--cards-mobile-right-icon: ' • ';
+--cards-mobile-property-font-color: unset;
+--cards-mobile-property-font-size: 10px;
+--cards-mobile-property-font-weight: 100;
+
+--cards-mobile-hover-animation-time: .15s;
+--cards-mobile-hover-zoom: 101%;
+--cards-mobile-hover-shadow-color: var(--interactive-accent);
+
+--cards-mobile-list-font-size: unset;
+--cards-mobile-list-font-weight: unset;
 }
 
 /*#endregion*/
@@ -138,7 +201,8 @@ body {
 .cards table.dataview>tbody>tr>td:not(
   .cards table.dataview > tbody > tr > td:last-child:has(progress), 
   .cards table.dataview > tbody > tr > td:has(img), 
-  .cards table.dataview > tbody > tr > td:nth-child(2):has(a)
+  .cards table.dataview > tbody > tr > td:nth-child(2):has(a),
+  span.cards-icon
   ) {
   display: flex;
   justify-content: center;
@@ -224,7 +288,7 @@ body {
   font-size: var(--cards-property-font-size);
   font-weight: var(--cards-property-font-weight);
   display: block;
-  color: var(--cards-property-font-color)
+  color: var(--cards-property-font-color);
 }
 
 .cards-icon::before {
@@ -262,8 +326,6 @@ body {
 /*#endregion*/
 
 /*#region PROGRESS BAR*/
-
-
 .cards.markdown-preview-view progress,
 .cards.markdown-rendered progress,
 .cards.markdown-source-view.is-live-preview progress {
@@ -291,8 +353,82 @@ body {
 
 /*#endregion*/
 
-/* @settings
+/*#region MOBILE STYLES*/
+@media(max-width:400pt) {
+body {
+    --cards-padding: 0;
+    --cards-aspect-ratio: auto;
+    /*In development for flex-width*/
+    --cards-max-width: 1fr;
+    --cards-columns: repeat(auto-fit, minmax(var(--cards-mobile-min-width), var(--cards-max-width))) !important;
+    
+    --cards-min-width: var(--cards-mobile-min-width) !important;
+    --cards-rows-height: var(--cards-mobile-rows-height);
+    --cards-background: var(--cards-mobile-background);
+    --cards-background-image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/660px-No-Image-Placeholder.svg.png";
+    --cards-columns-gap: var(--cards-mobile-columns-gap);
+    --cards-row-gap: var(--cards-mobile-row-gap);
+    --cards-border-width:  var(--cards-mobile-border-width);
+    --cards-border-color:  var(--cards-mobile-border-color);
+    --cards-border-radius:  var(--cards-mobile-border-radius) !important;
+    
+    --cards-title-link-rows-before-clip:  var(--cards-mobile-title-link-rows-before-clip);
+    --cards-title-link-font-color:  var(--cards-mobile-title-link-font-color);
+    --cards-title-link-font-size:  var(--cards-mobile-title-link-font-size) !important;
+    --cards-title-link-font-weight:  var(--cards-mobile-title-link-font-weight) !important;
+    --cards-title-link-horizontal-alignment:  var(--cards-mobile-title-link-horizontal-alignment) !important;
+    --cards-title-link-vertical-alignment:  var(--cards-mobile-title-link-vertical-alignment);
+    --cards-title-link-row-height:  var(--cards-mobile-title-link-row-height);
+    --cards-title-link-vertical-padding:  var(--cards-mobile-title-link-vertical-padding);
+    --cards-title-link-horizontal-padding:  var(--cards-mobile-title-link-horizontal-padding);
+    
+    --cards-image-height: var(--cards-mobile-image-height);
+    --cards-image-padding:  var(--cards-mobile-image-padding);
+    --cards-image-fit: var(--cards-mobile-image-fit);
+    --cards-image-zoom:  var(--cards-mobile-image-zoom) !important;
+    --cards-image-radius:  var(--cards-mobile-image-radius);
+    
+    --cards-rows-font-color:  var(--cards-mobile-rows-font-color) !important;
+    --cards-rows-font-size:  var(--cards-mobile-rows-font-size) !important;
+    --cards-rows-font-weight:  var(--cards-mobile-rows-font-weight) !important;
+    --cards-rows-horizontal-alignment:  var(--cards-mobile-rows-horizontal-alignment);
+    --cards-rows-vertical-alignment:  var(--cards-mobile-rows-vertical-alignment);
+    --cards-rows-vertical-padding:  var(--cards-mobile-rows-vertical-padding);
+    --cards-rows-horizontal-padding:  var(--cards-mobile-rows-horizontal-padding);
+    --cards-rows-before-clip:  var(--cards-mobile-rows-before-clip);
+    
+    --cards-progressbar-color:  var(--cards-mobile-progressbar-color) !important;
+    --cards-progressbar-width:  var(--cards-mobile-progressbar-width);
+    --cards-progressbar-height:  var(--cards-mobile-progressbar-height);
+    --cards-progressbar-border-radius: var(--cards-mobile-progressbar-border-radius) !important;
+    --cards-progressbar-font-color:  var(--cards-mobile-progressbar-font-color) !important;
+    --cards-progressbar-font-size:  var(--cards-mobile-progressbar-font-size);
+    --cards-progressbar-font-weight:  var(--cards-mobile-progressbar-font-weight);
+    --cards-progressbar-vertical-padding:  var(--cards-mobile-progressbar-vertical-padding);
+    --cards-progressbar-horizontal-padding:  var(--cards-mobile-progressbar-horizontal-padding) !important;
+    --cards-progressbar-horizontal-alignment:  var(--cards-mobile-progressbar-horizontal-alignment);
+    
+    --cards-left-icon: var(--cards-mobile-left-icon);
+    --cards-right-icon: var(--cards-mobile-right-icon);
+    --cards-property-font-color:  var(--cards-mobile-property-font-color);
+    --cards-property-font-size:  var(--cards-mobile-property-font-size);
+    --cards-property-font-weight:  var(--cards-mobile-property-font-weight);
+    
+    --cards-hover-animation-time:  var(--cards-mobile-hover-animation-time);
+    --cards-hover-zoom: var(--cards-mobile-hover-zoom) !important;
+    --cards-hover-shadow-color: var(--cards-mobile-hover-shadow-color);
+    
+    --cards-list-font-size: var(--cards-mobile-list-font-size);
+    --cards-list-font-weight: var(--cards-mobile-list-font-weight);
+}
+.tab-container .tab-contents {
+    padding: 5px 0 !important;
+}
 
+}
+/*#endregion*/
+
+/* @settings
 name: Cards snippet - DeusEx01
 id: a-unique-id
 settings:
@@ -687,5 +823,393 @@ settings:
         format: px
         default: 10
     - 
-    
+*/
+/* @settings
+name: Mobile Cards snippet - DeusEx01
+id: mobile-cards-mobile-mobile-view
+settings:
+    - 
+        id: mobile-title
+        title: Cards
+        type: heading
+        level: 3
+    - 
+        id: cards-mobile-min-width
+        title: Width
+        type: variable-number
+        format: px
+        default: 150
+    - 
+        id: cards-mobile-rows-height
+        title: Rows Height
+        type: variable-number
+        format: px
+        default: 40
+    - 
+        id: cards-mobile-background
+        title: Background Color
+        type: variable-color
+        format: rgb
+        default: rgb(0, 0, 0, 0)
+    - 
+        id: cards-mobile-columns-gap
+        title: Columns Gap
+        type: variable-number
+        format: px
+        default: 3
+    - 
+        id: cards-mobile-row-gap
+        title: Rows Gap
+        type: variable-number
+        format: px
+        default: 3
+    - 
+        id: cards-mobile-border-width
+        title: Border Width
+        type: variable-number
+        format: px
+        default: 1
+    - 
+        id: cards-mobile-border-color
+        title: Border Color
+        type: variable-color
+        format: rgb
+        default: rgb(0, 0, 0, 0)
+    - 
+        id: cards-mobile-border-radius
+        title: Border Radius
+        type: variable-number
+        format: px
+        default: 10
+    - 
+        id: cards-mobile-hover-zoom
+        title: Hover Zoom
+        description: Hover Zoom Animation
+        type: variable-number
+        format: "%"
+        default: 101
+    - 
+        id: cards-mobile-hover-shadow-color
+        title: Hover Shadow Color
+        type: variable-color
+        format: rgb
+        default: rgb(0, 0, 0, 0)
+    - 
+
+        id: cards-mobile-content
+        title: Cards Content
+        type: heading
+        level: 3
+    - 
+        id: image
+        title: Image(cover)
+        description: Image that is your cover(poster) of card 
+        type: heading
+        level: 4
+    - 
+        id: cards-mobile-image-height
+        title: Height
+        description: Height of an image.
+        type: variable-number
+        format: px
+        default: 160
+    - 
+        id: cards-mobile-image-padding
+        title: Padding
+        description: A container's paddings where image(cover) is stored
+        type: variable-number
+        format: px
+        default: 0
+    - 
+        id: cards-mobile-image-fit
+        title: Image Fit
+        description: How image is stored in container. If you want to display full image size then choice 'contain'. If you want to fill-up container then choice 'cover'
+        type: variable-select
+        format: px
+        default: cover
+        options:
+          - contain
+          - cover
+          - fill
+          - scale-down
+          - none
+    - 
+        id: cards-mobile-image-zoom
+        title: Zoom
+        description: How to zoom image
+        type: variable-number-slider
+        format: "%"
+        min: 50
+        max: 300
+        default: 100
+    - 
+        id: cards-mobile-image-radius
+        title: Border Radius
+        type: variable-number
+        format: px
+        default: 0
+
+
+
+    - 
+        id: title-link
+        title: Title
+        description: Title link that is a `file.link` in Dataview.
+        type: heading
+        level: 4
+    - 
+        id: cards-mobile-title-link-rows-before-clip
+        title: Rows Before Clip
+        description: Allows to define how many rows you want to see before it's clipped with `...` if there is no enough space in the row.
+        type: variable-number-slider
+        default: 2
+        min: 1
+        max: 10
+        step: 1
+    - 
+        id: cards-mobile-title-link-font-color
+        title: Title Color
+        type: variable-color
+        format: rgb
+        default: var(--link-color)
+    - 
+        id: cards-mobile-title-link-font-size
+        title: Title Font Size
+        type: variable-number
+        format: px
+        default: 12
+    - 
+        id: cards-mobile-title-link-font-weight
+        title: Title Font Weight
+        type: variable-number-slider
+        default: 700
+        min: 100
+        max: 900
+        step: 100
+    - 
+        id: cards-mobile-title-link-horizontal-alignment
+        title: Horizontal Alignment
+        type: variable-select
+        format: px
+        default: center
+        options:
+          - left
+          - right
+          - center
+    - 
+        id: cards-mobile-title-link-vertical-alignment
+        title: Vertical Alignment
+        type: variable-select
+        format: px
+        default: center
+        options:
+          - start
+          - center
+          - end
+    - 
+        id: cards-mobile-title-link-row-height
+        title: Title Row Height
+        type: variable-number
+        format: px
+        default: 40
+    - 
+        id: cards-mobile-title-link-vertical-padding
+        title: Title Vertical Paddings
+        type: variable-number
+        format: px
+        default: 5
+    - 
+        id: cards-mobile-title-link-horizontal-padding
+        title: Title Horizontal Paddings
+        type: variable-number
+        format: px
+        default: 5
+    - 
+
+        id: mobile-rows-title
+        title: Rows
+        description: Here you can change rows (except note title, progress bar)
+        type: heading
+        level: 4
+    - 
+        id: cards-mobile-rows-before-clip
+        title: Rows Before Clip
+        description: Allows to define how many rows you want to see before it's clipped with `...` if there is no enough space in the row.
+        type: variable-number-slider
+        default: 2
+        min: 1
+        max: 10
+        step: 1
+    -
+        id: cards-mobile-rows-font-color
+        title: Font Color
+        type: variable-color
+        format: rgb
+        default: rgb(0, 0, 0, 0)
+    - 
+        id: cards-mobile-rows-font-size
+        title: Font Size
+        type: variable-number
+        format: px
+        default: 10
+    - 
+        id: cards-mobile-rows-font-weight
+        title: Font Weight
+        type: variable-number-slider
+        default: 700
+        min: 100
+        max: 900
+        step: 100
+    - 
+        id: cards-mobile-rows-horizontal-alignment
+        title: Horizontal Alignment
+        type: variable-select
+        format: px
+        default: center
+        options:
+          - left
+          - right
+          - center
+    - 
+        id: cards-mobile-rows-vertical-alignment
+        title: Vertical Alignment
+        type: variable-select
+        format: px
+        default: center
+        options:
+          - start
+          - center
+          - end
+    - 
+        id: cards-mobile-rows-vertical-padding
+        title: Vertical Paddings
+        type: variable-number
+        format: px
+        default: 5
+    - 
+        id: cards-mobile-rows-horizontal-padding
+        title: Horizontal Paddings
+        type: variable-number
+        format: px
+        default: 5
+    - 
+        id: property-name
+        title: Property Name Style
+        description: This is a Property name with icons `"<span " + "class='cards-mobile-icon'>" + "Series" + "</span>"` from demo template
+        type: heading
+        level: 5
+    -
+        id: cards-mobile-left-icon
+        title: Left Icon
+        description: Text used in bullet points
+        type: variable-text
+        default: •
+        quotes: true
+    - 
+        id: cards-mobile-right-icon
+        title: Right Icon
+        description: Text used in bullet points
+        type: variable-text
+        default: •
+        quotes: true
+    - 
+        id: cards-mobile-property-font-color
+        title: Property Name Font Color
+        type: variable-color
+        format: rgb
+        default: rgb(0, 0, 0, 0)
+    - 
+        id: cards-mobile-property-font-size
+        title: Font Size
+        type: variable-number
+        format: px
+        default: 10
+    - 
+        id: cards-mobile-property-font-weight
+        title: Font Weight
+        type: variable-number-slider
+        default: 100
+        min: 100
+        max: 900
+        step: 100
+    - 
+
+        id: progress-bar
+        title: Progress Bar
+        description: Change progress bar
+        type: heading
+        level: 4
+    - 
+        id: cards-mobile-progressbar-color
+        title: Progress Bar Color
+        type: variable-color
+        format: rgb
+        default: var(--interactive-accent)
+    - 
+        id: cards-mobile-progressbar-width
+        title: Progress Bar Width
+        type: variable-number
+        format: "%"
+        default: 100
+    - 
+        id: cards-mobile-progressbar-height
+        title: Progress Bar Height
+        type: variable-number
+        format: px
+        default: 10
+    - 
+        id: cards-mobile-progressbar-font-color
+        title: Font Color
+        type: variable-color
+        format: rgb
+        default: rgb(0, 0, 0, 0)
+    - 
+        id: cards-mobile-progressbar-font-size
+        title: Font Size
+        type: variable-number
+        format: px
+        default: 10
+    - 
+        id: cards-mobile-progressbar-font-weight
+        title: Font Weight
+        type: variable-number-slider
+        default: 500
+        min: 100
+        max: 900
+        step: 100
+    - 
+        id: cards-mobile-progressbar-horizontal-alignment
+        title: Horizontal Alignment
+        type: variable-select
+        format: px
+        default: center
+        options:
+          - left
+          - right
+          - center
+    - 
+        id: cards-mobile-progressbar-vertical-padding
+        title: Vertical Paddings
+        type: variable-number
+        format: px
+        default: 2
+    - 
+        id: cards-mobile-progressbar-horizontal-padding
+        title: Horizontal Paddings
+        type: variable-number
+        format: px
+        default: 5
+    - 
+        id: cards-mobile-mobile-progressbar-width
+        title: Progress Bar Width
+        type: variable-number
+        format: "%"
+        default: 100
+    - 
+        id: cards-mobile-mobile-progressbar-border-radius
+        title: Progress Bar Border Radius
+        type: variable-number
+        format: px
+        default: 10
+    - 
 */
