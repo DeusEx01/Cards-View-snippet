@@ -94,7 +94,8 @@ Long text with 1+ rows
 
 
 # To-Do
-- [ ] Make adaptive cards for different resolutions(devices) e.g. @media (max-width: 400pt)
+- [ ] Make adaptive cards (mobile version) for different resolutions(devices) e.g. @media (max-width: 400pt)
+- [ ] Add font-family support via Style Settings
 - [x] Make individual `.cards-icon` styles.
 - [ ] Collect feedbacks and make a list of needed fixes/bugs.
 - [x] Check popular themes and make better compability.
