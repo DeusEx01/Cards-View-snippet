@@ -15,259 +15,259 @@ OR here you can manually find some styles for custom changes like color, width o
 */
 body {
 /*#region Desktop Styles*/
-  --cards-padding: 0;
-  --cards-aspect-ratio: auto;
-  /*In development for flex-width*/
-  --cards-max-width: 1fr;
-  --cards-columns: repeat(auto-fit, minmax(var(--cards-min-width), var(--cards-max-width)));
-  
-  --cards-min-width: 240px;
-  --cards-rows-height: 50px;
-  --cards-background: transparent;
-  --cards-background-image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/660px-No-Image-Placeholder.svg.png";
-  --cards-columns-gap: 5px;
-  --cards-row-gap: 5px;
-  --cards-border-width: 1px;
-  --cards-border-color: var(--divider-color);
-  --cards-border-radius: 10px;
+    --cards-padding: 0;
+    --cards-aspect-ratio: auto;
+    /*In development for flex-width*/
+    --cards-max-width: 1fr;
+    --cards-columns: repeat(auto-fit, minmax(var(--cards-min-width), var(--cards-max-width)));
+    
+    --cards-min-width: 240px;
+    --cards-rows-height: 50px;
+    --cards-background: transparent;
+    --cards-background-image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/660px-No-Image-Placeholder.svg.png";
+    --cards-columns-gap: 5px;
+    --cards-row-gap: 5px;
+    --cards-border-width: 1px;
+    --cards-border-color: var(--divider-color);
+    --cards-border-radius: 10px;
 
-  --cards-title-link-rows-before-clip: 2;
-  --cards-title-link-font-color: var(--link-color);
-  --cards-title-link-font-size: 15px;
-  --cards-title-link-font-weight: 500;
-  --cards-title-link-horizontal-alignment: center;
-  --cards-title-link-vertical-alignment: center;
-  --cards-title-link-row-height: 50px;
-  --cards-title-link-vertical-padding: 5px;
-  --cards-title-link-horizontal-padding: 5px;
+    --cards-title-link-rows-before-clip: 2;
+    --cards-title-link-font-color: var(--link-color);
+    --cards-title-link-font-size: 15px;
+    --cards-title-link-font-weight: 500;
+    --cards-title-link-horizontal-alignment: center;
+    --cards-title-link-vertical-alignment: center;
+    --cards-title-link-row-height: 50px;
+    --cards-title-link-vertical-padding: 5px;
+    --cards-title-link-horizontal-padding: 5px;
 
-  --cards-image-height: 290px;
-  --cards-image-padding: 0px;
-  --cards-image-fit: cover;
-  --cards-image-zoom: 100%;
-  --cards-image-radius: 0px;
+    --cards-image-height: 290px;
+    --cards-image-padding: 0px;
+    --cards-image-fit: cover;
+    --cards-image-zoom: 100%;
+    --cards-image-radius: 0px;
 
-  --cards-rows-font-color: unset;
-  --cards-rows-font-size: 13px;
-  --cards-rows-font-weight: 500;
-  --cards-rows-horizontal-alignment: center;
-  --cards-rows-vertical-alignment: center;
-  --cards-rows-vertical-padding: 5px;
-  --cards-rows-horizontal-padding: 5px;
-  --cards-rows-before-clip: 2;
+    --cards-rows-font-color: unset;
+    --cards-rows-font-size: 13px;
+    --cards-rows-font-weight: 500;
+    --cards-rows-horizontal-alignment: center;
+    --cards-rows-vertical-alignment: center;
+    --cards-rows-vertical-padding: 5px;
+    --cards-rows-horizontal-padding: 5px;
+    --cards-rows-before-clip: 2;
 
-  --cards-progressbar-color: var(--interactive-accent);
-  --cards-progressbar-width: 100%;
-  --cards-progressbar-height: 15px;
-  --cards-progressbar-border-radius: 10px;
-  --cards-progressbar-font-color: unset;
-  --cards-progressbar-font-size: 10px;
-  --cards-progressbar-font-weight: 500;
-  --cards-progressbar-vertical-padding: 2px;
-  --cards-progressbar-horizontal-padding: 2px;
-  --cards-progressbar-horizontal-alignment: center;
+    --cards-progressbar-color: var(--interactive-accent);
+    --cards-progressbar-width: 100%;
+    --cards-progressbar-height: 15px;
+    --cards-progressbar-border-radius: 10px;
+    --cards-progressbar-font-color: unset;
+    --cards-progressbar-font-size: 10px;
+    --cards-progressbar-font-weight: 500;
+    --cards-progressbar-vertical-padding: 2px;
+    --cards-progressbar-horizontal-padding: 2px;
+    --cards-progressbar-horizontal-alignment: center;
 
-  --cards-left-icon: ' • ';
-  --cards-right-icon: ' • ';
-  --cards-property-font-color: unset;
-  --cards-property-font-size: 10px;
-  --cards-property-font-weight: 100;
+    --cards-left-icon: ' • ';
+    --cards-right-icon: ' • ';
+    --cards-property-font-color: unset;
+    --cards-property-font-size: 10px;
+    --cards-property-font-weight: 100;
 
 
 
-  --cards-hover-animation-time: .15s;
-  --cards-hover-zoom: 101%;
-  --cards-hover-shadow-color: var(--interactive-accent);
+    --cards-hover-animation-time: .15s;
+    --cards-hover-zoom: 101%;
+    --cards-hover-shadow-color: var(--interactive-accent);
 
-  --cards-list-font-size: unset;
-  --cards-list-font-weight: unset;
-  /*#endregion*/  
+    --cards-list-font-size: unset;
+    --cards-list-font-weight: unset;
+    /*#endregion*/  
 /*#endregion*/
 
 /*#region Mobile Styles*/
---cards-mobile-padding: 0;
---cards-mobile-aspect-ratio: auto;
---cards-mobile-max-width: 1fr;
---cards-mobile-columns: repeat(auto-fit, minmax(var(--cards-mobile-min-width), var(--cards-mobile-max-width)));
+    --cards-mobile-padding: 0;
+    --cards-mobile-aspect-ratio: auto;
+    --cards-mobile-max-width: 1fr;
+    --cards-mobile-columns: repeat(auto-fit, minmax(var(--cards-mobile-min-width), var(--cards-mobile-max-width)));
 
---cards-mobile-min-width: 150px;
---cards-mobile-rows-height: 40px;
---cards-mobile-background: transparent;
---cards-mobile-background-image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/660px-No-Image-Placeholder.svg.png";
---cards-mobile-columns-gap: 3px;
---cards-mobile-row-gap: 3px;
---cards-mobile-border-width: 1px;
---cards-mobile-border-color: var(--divider-color);
---cards-mobile-border-radius: 10px;
+    --cards-mobile-min-width: 150px;
+    --cards-mobile-rows-height: 40px;
+    --cards-mobile-background: transparent;
+    --cards-mobile-background-image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/660px-No-Image-Placeholder.svg.png";
+    --cards-mobile-columns-gap: 3px;
+    --cards-mobile-row-gap: 3px;
+    --cards-mobile-border-width: 1px;
+    --cards-mobile-border-color: var(--divider-color);
+    --cards-mobile-border-radius: 10px;
 
---cards-mobile-title-link-rows-before-clip: 2;
---cards-mobile-title-link-font-color: var(--link-color);
---cards-mobile-title-link-font-size: 12px;
---cards-mobile-title-link-font-weight: 700;
---cards-mobile-title-link-horizontal-alignment: center;
---cards-mobile-title-link-vertical-alignment: center;
---cards-mobile-title-link-row-height: 40px;
---cards-mobile-title-link-vertical-padding: 5px;
---cards-mobile-title-link-horizontal-padding: 5px;
+    --cards-mobile-title-link-rows-before-clip: 2;
+    --cards-mobile-title-link-font-color: var(--link-color);
+    --cards-mobile-title-link-font-size: 12px;
+    --cards-mobile-title-link-font-weight: 700;
+    --cards-mobile-title-link-horizontal-alignment: center;
+    --cards-mobile-title-link-vertical-alignment: center;
+    --cards-mobile-title-link-row-height: 40px;
+    --cards-mobile-title-link-vertical-padding: 5px;
+    --cards-mobile-title-link-horizontal-padding: 5px;
 
---cards-mobile-image-height: 160px;
---cards-mobile-image-padding: 0;
---cards-mobile-image-fit: cover;
---cards-mobile-image-zoom: 100%;
---cards-mobile-image-radius: 0;
+    --cards-mobile-image-height: 160px;
+    --cards-mobile-image-padding: 0;
+    --cards-mobile-image-fit: cover;
+    --cards-mobile-image-zoom: 100%;
+    --cards-mobile-image-radius: 0;
 
---cards-mobile-rows-font-color: unset;
---cards-mobile-rows-font-size: 10px; 
---cards-mobile-rows-font-weight: 700;
---cards-mobile-rows-horizontal-alignment: center;
---cards-mobile-rows-vertical-alignment: center;
---cards-mobile-rows-vertical-padding: 5px;
---cards-mobile-rows-horizontal-padding: 5px;
---cards-mobile-rows-before-clip: 2;
+    --cards-mobile-rows-font-color: unset;
+    --cards-mobile-rows-font-size: 10px; 
+    --cards-mobile-rows-font-weight: 700;
+    --cards-mobile-rows-horizontal-alignment: center;
+    --cards-mobile-rows-vertical-alignment: center;
+    --cards-mobile-rows-vertical-padding: 5px;
+    --cards-mobile-rows-horizontal-padding: 5px;
+    --cards-mobile-rows-before-clip: 2;
 
---cards-mobile-progressbar-color: var(--interactive-accent);
---cards-mobile-progressbar-width: 100%;
---cards-mobile-progressbar-height: 10px;
---cards-mobile-progressbar-border-radius: 10px;
---cards-mobile-progressbar-font-color: unset;
---cards-mobile-progressbar-font-size: 10px;
---cards-mobile-progressbar-font-weight: 500;
---cards-mobile-progressbar-vertical-padding: 2px;
---cards-mobile-progressbar-horizontal-padding: 5px;
---cards-mobile-progressbar-horizontal-alignment: center;
+    --cards-mobile-progressbar-color: var(--interactive-accent);
+    --cards-mobile-progressbar-width: 100%;
+    --cards-mobile-progressbar-height: 10px;
+    --cards-mobile-progressbar-border-radius: 10px;
+    --cards-mobile-progressbar-font-color: unset;
+    --cards-mobile-progressbar-font-size: 10px;
+    --cards-mobile-progressbar-font-weight: 500;
+    --cards-mobile-progressbar-vertical-padding: 2px;
+    --cards-mobile-progressbar-horizontal-padding: 5px;
+    --cards-mobile-progressbar-horizontal-alignment: center;
 
---cards-mobile-left-icon: ' • ';
---cards-mobile-right-icon: ' • ';
---cards-mobile-property-font-color: unset;
---cards-mobile-property-font-size: 10px;
---cards-mobile-property-font-weight: 100;
+    --cards-mobile-left-icon: ' • ';
+    --cards-mobile-right-icon: ' • ';
+    --cards-mobile-property-font-color: unset;
+    --cards-mobile-property-font-size: 10px;
+    --cards-mobile-property-font-weight: 100;
 
---cards-mobile-hover-animation-time: .15s;
---cards-mobile-hover-zoom: 101%;
---cards-mobile-hover-shadow-color: var(--interactive-accent);
+    --cards-mobile-hover-animation-time: .15s;
+    --cards-mobile-hover-zoom: 101%;
+    --cards-mobile-hover-shadow-color: var(--interactive-accent);
 
---cards-mobile-list-font-size: unset;
---cards-mobile-list-font-weight: unset;
+    --cards-mobile-list-font-size: unset;
+    --cards-mobile-list-font-weight: unset;
 }
 
 /*#endregion*/
 
 /*#region CARD VIEW*/
 .cards table.dataview tbody {
-  display: grid;
-  justify-items: center;
-  grid-template-columns: var(--cards-columns);
-  grid-column-gap: var(--cards-columns-gap);
-  grid-row-gap: var(--cards-row-gap);
-  justify-items: center;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: var(--cards-columns);
+    grid-column-gap: var(--cards-columns-gap);
+    grid-row-gap: var(--cards-row-gap);
+    justify-items: center;
 
-  clear: both;
+    clear: both;
 }
 
 .cards table.dataview thead {
-  display: none;
+    display: none;
 }
 
 /*#endregion*/
 
 /*#region CARDS*/
 .cards table.dataview>tbody>tr {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
 
-  border: var(--cards-border-width) solid var(--cards-border-color);
-  border-radius: var(--cards-border-radius);
-  background-color: var(--cards-background);
-  overflow: hidden;
-  width: var(--cards-min-width);
+    border: var(--cards-border-width) solid var(--cards-border-color);
+    border-radius: var(--cards-border-radius);
+    background-color: var(--cards-background);
+    overflow: hidden;
+    width: var(--cards-min-width);
 
-  padding: 0 0 calc(var(--cards-padding)/3) 0;
-  margin: 0;
+    padding: 0 0 calc(var(--cards-padding)/3) 0;
+    margin: 0;
 
-  transition: all var(--cards-hover-animation-time) linear;
+    transition: all var(--cards-hover-animation-time) linear;
 }
 
 .cards table.dataview>tbody>tr:hover {
-  border: var(--cards-border-width) solid var(--interactive-accent);
-  box-shadow: 0 4px 6px 0px var(--cards-hover-shadow-color), 0 1px 3px 1px var(--cards-hover-shadow-color);
-  transform: scale(var(--cards-hover-zoom));
-  transition: all var(--cards-hover-animation-time) linear;
-  z-index: 99;
-  background-color: var(--cards-background);
+    border: var(--cards-border-width) solid var(--interactive-accent);
+    box-shadow: 0 4px 6px 0px var(--cards-hover-shadow-color), 0 1px 3px 1px var(--cards-hover-shadow-color);
+    transform: scale(var(--cards-hover-zoom));
+    transition: all var(--cards-hover-animation-time) linear;
+    z-index: 99;
+    background-color: var(--cards-background);
 }
 
 
 .cards table.dataview>tbody>tr>td:not(
-  .cards table.dataview > tbody > tr > td:last-child:has(progress), 
-  .cards table.dataview > tbody > tr > td:has(img), 
-  .cards table.dataview > tbody > tr > td:nth-child(2):has(a),
-  span.cards-icon
-  ) {
-  display: flex;
-  justify-content: center;
-  align-items: var(--cards-rows-vertical-alignment);
+    .cards table.dataview > tbody > tr > td:last-child:has(progress), 
+    .cards table.dataview > tbody > tr > td:has(img), 
+    .cards table.dataview > tbody > tr > td:nth-child(2):has(a),
+    span.cards-icon
+    ) {
+    display: flex;
+    justify-content: center;
+    align-items: var(--cards-rows-vertical-alignment);
 
-  height: var(--cards-rows-height);
-  font-size: var(--cards-rows-font-size);
-  font-weight: var(--cards-rows-font-weight);
-  color: var(--cards-rows-font-color);
-  text-align: var(--cards-rows-horizontal-alignment);
-  padding: var(--cards-rows-vertical-padding) var(--cards-rows-horizontal-padding);
+    height: var(--cards-rows-height);
+    font-size: var(--cards-rows-font-size);
+    font-weight: var(--cards-rows-font-weight);
+    color: var(--cards-rows-font-color);
+    text-align: var(--cards-rows-horizontal-alignment);
+    padding: var(--cards-rows-vertical-padding) var(--cards-rows-horizontal-padding);
 }
 
 .cards table.dataview>tbody>tr>td:not(.cards table.dataview > tbody > tr > td:last-child) {
-  border-bottom: 1px solid var(--cards-border-color);
+    border-bottom: 1px solid var(--cards-border-color);
 }
 
 .cards table.dataview tbody>tr>td:has(img){
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 
-  padding: var(--cards-image-padding);
+    padding: var(--cards-image-padding);
 
-  height: var(--cards-image-height);
-  text-align: center;
+    height: var(--cards-image-height);
+    text-align: center;
 
 }
 
 .cards table.dataview tbody>tr>td:nth-child(2):has(a){
-  height: var(--cards-title-link-row-height);
-  padding: var(--cards-title-link-vertical-padding) var(--cards-title-link-horizontal-padding);
-  display: flex;
-  align-items: var(--cards-title-link-vertical-alignment);
+    height: var(--cards-title-link-row-height);
+    padding: var(--cards-title-link-vertical-padding) var(--cards-title-link-horizontal-padding);
+    display: flex;
+    align-items: var(--cards-title-link-vertical-alignment);
 }
 
 .cards table.dataview tbody>tr>td:nth-child(2):has(a) a {
-  display: -webkit-box;
-  -webkit-line-clamp: var(--cards-title-link-rows-before-clip);
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  height: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: var(--cards-title-link-rows-before-clip);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 100%;
 
-  text-decoration: none;
-  color: var(--cards-title-link-font-color);
-  font-size: var(--cards-title-link-font-size);
-  font-weight: var(--cards-title-link-font-weight) !important;
-  text-align: var(--cards-title-link-horizontal-alignment);
+    text-decoration: none;
+    color: var(--cards-title-link-font-color);
+    font-size: var(--cards-title-link-font-size);
+    font-weight: var(--cards-title-link-font-weight) !important;
+    text-align: var(--cards-title-link-horizontal-alignment);
 }
 
 .cards table.dataview>tbody>tr>td>span:first-child {
-  display: -webkit-box;
-  -webkit-line-clamp: var(--cards-rows-before-clip);
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: var(--cards-rows-before-clip);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    width: 100%;
 }
 .cards table.dataview tbody>tr>td:has(span[alt])  {
-  height: var(--cards-image-height) !important;
+    height: var(--cards-image-height) !important;
 }
 .cards table.dataview tbody>tr>td:has(img) img {
-  object-fit: var(--cards-image-fit);
-  width: 100%;
-  height: 100%;
-  transform: scale(var(--cards-image-zoom));
-  border-radius: var(--cards-image-radius);
+    object-fit: var(--cards-image-fit);
+    width: 100%;
+    height: 100%;
+    transform: scale(var(--cards-image-zoom));
+    border-radius: var(--cards-image-radius);
 }
 
 
@@ -277,50 +277,48 @@ body {
 
 
 /*Readable line width fixing*/
-.cards.cards-readline-off.markdown-preview-view.is-readable-line-width .markdown-preview-sizer,
-.cards.cards-readline-off.markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer,
-.cards.cards-readline-off.markdown-source-view.mod-cm6.is-readable-line-width .cm-content {
-  margin: auto auto;
+body .cards-readline-off {
+    --file-line-width: 100% !important;
 }
 
 /*Property names and decorations*/
 .cards-icon {
-  font-size: var(--cards-property-font-size);
-  font-weight: var(--cards-property-font-weight);
-  display: block;
-  color: var(--cards-property-font-color);
+    font-size: var(--cards-property-font-size);
+    font-weight: var(--cards-property-font-weight);
+    display: block;
+    color: var(--cards-property-font-color);
 }
 
 .cards-icon::before {
-  content: var(--cards-left-icon);
+    content: var(--cards-left-icon);
 }
 
 .cards-icon::after {
-  content: var(--cards-right-icon);
+    content: var(--cards-right-icon);
 }
 
 /*#endregion*/
 
 /*#region LISTS*/
 .cards table.dataview tbody>tr>td>ul {
-  list-style: none;
-  display: -webkit-box;
-  -webkit-line-clamp: var(--cards-rows-before-clip);
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+    list-style: none;
+    display: -webkit-box;
+    -webkit-line-clamp: var(--cards-rows-before-clip);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 
-  font-size: var(--cards-list-font-size);
-  font-weight: var(--cards-list-font-weight);
+    font-size: var(--cards-list-font-size);
+    font-weight: var(--cards-list-font-weight);
 }
 
 .cards table.dataview tbody>tr>td>ul>li {
-  display: inline;
-  margin: 0;
+    display: inline;
+    margin: 0;
 }
 
 .cards table.dataview tbody>tr>td>ul>li:not(.cards table.dataview tbody>tr>td>ul>li:last-child)::after {
-  content: ", ";
-  display: inline;
+    content: ", ";
+    display: inline;
 }
 
 /*#endregion*/
@@ -329,26 +327,26 @@ body {
 .cards.markdown-preview-view progress,
 .cards.markdown-rendered progress,
 .cards.markdown-source-view.is-live-preview progress {
-  display: block;
-  width: var(--cards-progressbar-width);
-  height: var(--cards-progressbar-height);
-  border-radius: var(--cards-progressbar-border-radius);
-  
-  margin: 5px auto;
+    display: block;
+    width: var(--cards-progressbar-width);
+    height: var(--cards-progressbar-height);
+    border-radius: var(--cards-progressbar-border-radius);
+    
+    margin: 5px auto;
 
 }
 
 .cards progress::-webkit-progress-value {
-  background: var(--cards-progressbar-color) !important;
+    background: var(--cards-progressbar-color) !important;
 }
 
 .cards table.dataview tbody>tr>td:has(progress) {
-  font-size: var(--cards-progressbar-font-size);
-  font-weight: var(--cards-progressbar-font-weight);
+    font-size: var(--cards-progressbar-font-size);
+    font-weight: var(--cards-progressbar-font-weight);
 
-  padding: var(--cards-progressbar-vertical-padding) var(--cards-progressbar-horizontal-padding);
-  text-align: var(--cards-progressbar-horizontal-alignment);
-  color: var(--cards-progressbar-font-color)
+    padding: var(--cards-progressbar-vertical-padding) var(--cards-progressbar-horizontal-padding);
+    text-align: var(--cards-progressbar-horizontal-alignment);
+    color: var(--cards-progressbar-font-color)
 }
 
 /*#endregion*/
@@ -532,11 +530,11 @@ settings:
         format: px
         default: cover
         options:
-          - contain
-          - cover
-          - fill
-          - scale-down
-          - none
+            - contain
+            - cover
+            - fill
+            - scale-down
+            - none
     - 
         id: cards-image-zoom
         title: Zoom
@@ -598,9 +596,9 @@ settings:
         format: px
         default: center
         options:
-          - left
-          - right
-          - center
+            - left
+            - right
+            - center
     - 
         id: cards-title-link-vertical-alignment
         title: Vertical Alignment
@@ -608,9 +606,9 @@ settings:
         format: px
         default: center
         options:
-          - start
-          - center
-          - end
+            - start
+            - center
+            - end
     - 
         id: cards-title-link-row-height
         title: Title Row Height
@@ -672,9 +670,9 @@ settings:
         format: px
         default: center
         options:
-          - left
-          - right
-          - center
+            - left
+            - right
+            - center
     - 
         id: cards-rows-vertical-alignment
         title: Vertical Alignment
@@ -682,9 +680,9 @@ settings:
         format: px
         default: center
         options:
-          - start
-          - center
-          - end
+            - start
+            - center
+            - end
     - 
         id: cards-rows-vertical-padding
         title: Vertical Paddings
@@ -789,9 +787,9 @@ settings:
         format: px
         default: center
         options:
-          - left
-          - right
-          - center
+            - left
+            - right
+            - center
     - 
         id: cards-progressbar-vertical-padding
         title: Vertical Paddings
@@ -928,11 +926,11 @@ settings:
         format: px
         default: cover
         options:
-          - contain
-          - cover
-          - fill
-          - scale-down
-          - none
+            - contain
+            - cover
+            - fill
+            - scale-down
+            - none
     - 
         id: cards-mobile-image-zoom
         title: Zoom
@@ -993,9 +991,9 @@ settings:
         format: px
         default: center
         options:
-          - left
-          - right
-          - center
+            - left
+            - right
+            - center
     - 
         id: cards-mobile-title-link-vertical-alignment
         title: Vertical Alignment
@@ -1003,9 +1001,9 @@ settings:
         format: px
         default: center
         options:
-          - start
-          - center
-          - end
+            - start
+            - center
+            - end
     - 
         id: cards-mobile-title-link-row-height
         title: Title Row Height
@@ -1067,9 +1065,9 @@ settings:
         format: px
         default: center
         options:
-          - left
-          - right
-          - center
+            - left
+            - right
+            - center
     - 
         id: cards-mobile-rows-vertical-alignment
         title: Vertical Alignment
@@ -1077,9 +1075,9 @@ settings:
         format: px
         default: center
         options:
-          - start
-          - center
-          - end
+            - start
+            - center
+            - end
     - 
         id: cards-mobile-rows-vertical-padding
         title: Vertical Paddings
@@ -1184,9 +1182,9 @@ settings:
         format: px
         default: center
         options:
-          - left
-          - right
-          - center
+            - left
+            - right
+            - center
     - 
         id: cards-mobile-progressbar-vertical-padding
         title: Vertical Paddings
