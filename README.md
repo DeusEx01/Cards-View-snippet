@@ -19,7 +19,8 @@ Here is a demo result with quick shows case different themes:
 
 And here is my personal tweaked snippet like a showcase(I've changed some stuff to my taste and you can do it too. See **Usage** section):
 
-![image](https://github.com/user-attachments/assets/77f006cc-be0b-4f69-ab98-bfcea79f863f)
+![image](https://github.com/user-attachments/assets/9f90822b-5f49-4439-b4d4-abe2a6ae13a9)
+
 
 **Remember, it's a raw and new snippet, so there are some things that you and me don't expect <3**
 
