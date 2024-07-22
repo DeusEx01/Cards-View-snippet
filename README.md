@@ -62,7 +62,7 @@ Now it's done and you can see a default cards view.
 3. In **Style Settings** you can see two settings. For Desktop version and mobile version. `Cards snippet - DeusEx01` and `Mobile Cards snippet - DeusEx01` respectively.
 > [!TIP]
 > Mobile version is activated if width of screen less than 400 points. To change the width go to the snippet and find `@media(max-width:400pt)`, then change `max-width:` to your value.
-4. If you want to backup default style click `Restore default` button:
+4. If you want to restore default style click `Restore default` button:
 
 ![image](https://github.com/user-attachments/assets/ce569a55-8859-4454-a8a2-0d5958f1664f)
 
