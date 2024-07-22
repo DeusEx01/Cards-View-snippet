@@ -1,6 +1,6 @@
 # Cards-View-snippet
 This is a snippet for alternative display style of `Dataview` results. Most appropriate case of using is creating personal libraries.
-Here is a demo result that I share (default theme/styles):
+Here is a demo result with quick shows case different themes:
 
 **Desktop version**
 
