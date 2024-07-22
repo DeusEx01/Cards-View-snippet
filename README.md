@@ -92,5 +92,5 @@ After: ![image|200](https://github.com/user-attachments/assets/beb0ef09-b99e-401
 - [x] Make individual `.cards-icon` styles.
 - [ ] Collect feedbacks and make a list of needed fixes/bugs.
 - [x] Check popular themes and make better compability.
-- [ ] Think about merging with MetaData + Dataview + Snippet
+- [ ] Think about merging with MetaData + Dataview + Snippet (Right now it's too slow for working with)
 - [ ] Change selector for readable line length to `--file-line-width` native variable
