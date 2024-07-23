@@ -352,6 +352,7 @@ body .cards-readline-off {
 /*#endregion*/
 
 /*#region MOBILE STYLES*/
+/*To find a better solution instead of !important. Maybe rewrite each selector for better specificy*/
 @media(max-width:400pt) {
 body {
     --cards-padding: 0;
@@ -361,63 +362,63 @@ body {
     --cards-columns: repeat(auto-fit, minmax(var(--cards-mobile-min-width), var(--cards-max-width))) !important;
     
     --cards-min-width: var(--cards-mobile-min-width) !important;
-    --cards-rows-height: var(--cards-mobile-rows-height);
-    --cards-background: var(--cards-mobile-background);
+    --cards-rows-height: var(--cards-mobile-rows-height) !important;
+    --cards-background: var(--cards-mobile-background) !important;
     --cards-background-image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/660px-No-Image-Placeholder.svg.png";
-    --cards-columns-gap: var(--cards-mobile-columns-gap);
-    --cards-row-gap: var(--cards-mobile-row-gap);
-    --cards-border-width:  var(--cards-mobile-border-width);
-    --cards-border-color:  var(--cards-mobile-border-color);
+    --cards-columns-gap: var(--cards-mobile-columns-gap) !important;
+    --cards-row-gap: var(--cards-mobile-row-gap) !important;
+    --cards-border-width:  var(--cards-mobile-border-width) !important;
+    --cards-border-color:  var(--cards-mobile-border-color) !important;
     --cards-border-radius:  var(--cards-mobile-border-radius) !important;
     
-    --cards-title-link-rows-before-clip:  var(--cards-mobile-title-link-rows-before-clip);
-    --cards-title-link-font-color:  var(--cards-mobile-title-link-font-color);
+    --cards-title-link-rows-before-clip:  var(--cards-mobile-title-link-rows-before-clip) !important;
+    --cards-title-link-font-color:  var(--cards-mobile-title-link-font-color) !important;
     --cards-title-link-font-size:  var(--cards-mobile-title-link-font-size) !important;
     --cards-title-link-font-weight:  var(--cards-mobile-title-link-font-weight) !important;
     --cards-title-link-horizontal-alignment:  var(--cards-mobile-title-link-horizontal-alignment) !important;
-    --cards-title-link-vertical-alignment:  var(--cards-mobile-title-link-vertical-alignment);
-    --cards-title-link-row-height:  var(--cards-mobile-title-link-row-height);
-    --cards-title-link-vertical-padding:  var(--cards-mobile-title-link-vertical-padding);
-    --cards-title-link-horizontal-padding:  var(--cards-mobile-title-link-horizontal-padding);
+    --cards-title-link-vertical-alignment:  var(--cards-mobile-title-link-vertical-alignment) !important;
+    --cards-title-link-row-height:  var(--cards-mobile-title-link-row-height) !important;
+    --cards-title-link-vertical-padding:  var(--cards-mobile-title-link-vertical-padding) !important;
+    --cards-title-link-horizontal-padding:  var(--cards-mobile-title-link-horizontal-padding) !important;
     
-    --cards-image-height: var(--cards-mobile-image-height);
-    --cards-image-padding:  var(--cards-mobile-image-padding);
-    --cards-image-fit: var(--cards-mobile-image-fit);
+    --cards-image-height: var(--cards-mobile-image-height) !important;
+    --cards-image-padding:  var(--cards-mobile-image-padding) !important;
+    --cards-image-fit: var(--cards-mobile-image-fit) !important;
     --cards-image-zoom:  var(--cards-mobile-image-zoom) !important;
-    --cards-image-radius:  var(--cards-mobile-image-radius);
+    --cards-image-radius:  var(--cards-mobile-image-radius) !important;
     
     --cards-rows-font-color:  var(--cards-mobile-rows-font-color) !important;
     --cards-rows-font-size:  var(--cards-mobile-rows-font-size) !important;
     --cards-rows-font-weight:  var(--cards-mobile-rows-font-weight) !important;
-    --cards-rows-horizontal-alignment:  var(--cards-mobile-rows-horizontal-alignment);
-    --cards-rows-vertical-alignment:  var(--cards-mobile-rows-vertical-alignment);
-    --cards-rows-vertical-padding:  var(--cards-mobile-rows-vertical-padding);
-    --cards-rows-horizontal-padding:  var(--cards-mobile-rows-horizontal-padding);
-    --cards-rows-before-clip:  var(--cards-mobile-rows-before-clip);
+    --cards-rows-horizontal-alignment:  var(--cards-mobile-rows-horizontal-alignment) !important;
+    --cards-rows-vertical-alignment:  var(--cards-mobile-rows-vertical-alignment) !important;
+    --cards-rows-vertical-padding:  var(--cards-mobile-rows-vertical-padding) !important;
+    --cards-rows-horizontal-padding:  var(--cards-mobile-rows-horizontal-padding) !important;
+    --cards-rows-before-clip:  var(--cards-mobile-rows-before-clip) !important;
     
     --cards-progressbar-color:  var(--cards-mobile-progressbar-color) !important;
-    --cards-progressbar-width:  var(--cards-mobile-progressbar-width);
-    --cards-progressbar-height:  var(--cards-mobile-progressbar-height);
+    --cards-progressbar-width:  var(--cards-mobile-progressbar-width) !important;
+    --cards-progressbar-height:  var(--cards-mobile-progressbar-height) !important;
     --cards-progressbar-border-radius: var(--cards-mobile-progressbar-border-radius) !important;
     --cards-progressbar-font-color:  var(--cards-mobile-progressbar-font-color) !important;
-    --cards-progressbar-font-size:  var(--cards-mobile-progressbar-font-size);
-    --cards-progressbar-font-weight:  var(--cards-mobile-progressbar-font-weight);
-    --cards-progressbar-vertical-padding:  var(--cards-mobile-progressbar-vertical-padding);
+    --cards-progressbar-font-size:  var(--cards-mobile-progressbar-font-size) !important;
+    --cards-progressbar-font-weight:  var(--cards-mobile-progressbar-font-weight) !important;
+    --cards-progressbar-vertical-padding:  var(--cards-mobile-progressbar-vertical-padding) !important;
     --cards-progressbar-horizontal-padding:  var(--cards-mobile-progressbar-horizontal-padding) !important;
-    --cards-progressbar-horizontal-alignment:  var(--cards-mobile-progressbar-horizontal-alignment);
+    --cards-progressbar-horizontal-alignment:  var(--cards-mobile-progressbar-horizontal-alignment) !important;
     
-    --cards-left-icon: var(--cards-mobile-left-icon);
-    --cards-right-icon: var(--cards-mobile-right-icon);
-    --cards-property-font-color:  var(--cards-mobile-property-font-color);
-    --cards-property-font-size:  var(--cards-mobile-property-font-size);
-    --cards-property-font-weight:  var(--cards-mobile-property-font-weight);
+    --cards-left-icon: var(--cards-mobile-left-icon) !important;
+    --cards-right-icon: var(--cards-mobile-right-icon) !important;
+    --cards-property-font-color:  var(--cards-mobile-property-font-color) !important;
+    --cards-property-font-size:  var(--cards-mobile-property-font-size) !important;
+    --cards-property-font-weight:  var(--cards-mobile-property-font-weight) !important;
     
-    --cards-hover-animation-time:  var(--cards-mobile-hover-animation-time);
+    --cards-hover-animation-time:  var(--cards-mobile-hover-animation-time) !important;
     --cards-hover-zoom: var(--cards-mobile-hover-zoom) !important;
-    --cards-hover-shadow-color: var(--cards-mobile-hover-shadow-color);
+    --cards-hover-shadow-color: var(--cards-mobile-hover-shadow-color) !important;
     
-    --cards-list-font-size: var(--cards-mobile-list-font-size);
-    --cards-list-font-weight: var(--cards-mobile-list-font-weight);
+    --cards-list-font-size: var(--cards-mobile-list-font-size) !important;
+    --cards-list-font-weight: var(--cards-mobile-list-font-weight) !important;
 }
 .tab-container .tab-contents {
     padding: 5px 0 !important;
