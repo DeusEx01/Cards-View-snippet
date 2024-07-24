@@ -45,12 +45,12 @@ It works with Dataview table and changes its display view from table to cards.
 # Installation
 0. DOWNLOAD **Style Settings plugin** and turn it on (https://github.com/mgmeyers/obsidian-style-settings).
 1. Download and enable **Dataview plugin**, learn it. (Some examples you can find in files)
-2. Download **Cards.css** file and insert it in your folder Obsidian's folder `snippets`(see documentantion https://help.obsidian.md/Extending+Obsidian/CSS+snippets) e.g. `C:\Users\User\Obsidian_folder\.obsidian\snippets\Cards.css`
+2. Download **Cards.css** file (https://github.com/DeusEx01/Cards-View-snippet/blob/main/Cards.css) and insert it in your folder Obsidian's folder `snippets`(see documentantion https://help.obsidian.md/Extending+Obsidian/CSS+snippets) e.g. `C:\Users\User\Obsidian_folder\.obsidian\snippets\Cards.css`
 3. Enable snippet in `Settings > Appearance > CSS snippets`
-4. Create a book note. (You can copy or download demo **Omniscient Reader's Viewpoint.md**)
+4. Create a book note. (You can copy or download demo **Omniscient Reader's Viewpoint.md**) https://github.com/DeusEx01/Cards-View-snippet/blob/main/Omniscient%20Reader's%20Viewpoint.md
 Expected result: ![image|200](https://github.com/user-attachments/assets/59523ea8-2c90-4505-9723-346487332ce6)
 
-5. Create new note with Dataview query. (You can copy or download demo **Cards view.md**)
+5. Create new note with Dataview query. (https://github.com/DeusEx01/Cards-View-snippet/blob/main/Cards%20view.md) (You can copy or download demo **Cards view.md**)
 Expected result: ![image|200](https://github.com/user-attachments/assets/91c4aad7-1336-4083-8e0f-917e6e4f59bf)
 Now it's done and you can see a default cards view.
 
