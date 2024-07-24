@@ -6,17 +6,18 @@
 6. [Usage](#Usage)
    - [Style Settings plugin](#Style-Settings-plugin)
    - [Dataview](#Dataview-query)
-      - [span](#<span/>)
+      - [span](#Span-Tag)
       - [Progress Bar](#Progress-Bar)
-9. [Headers](#headers)
-10. [Headers](#headers)
+9. [Implicit settings](#Some-implicit-styles)
+10. [Support cssclasses](#Some-support-classes-for-cssclasses-property.)
+11. [todo/future features](#TODO)
 
 
 # Cards-View-snippet
 *Click ★ if you liked the snippet*
 
 This is a snippet for alternative display style of `Dataview` results. Most appropriate case of using is creating personal libraries.
-Here is a demo result with quick shows case different themes:
+Here is a demo result with quick show case for different themes:
 
 **Desktop version**
 
@@ -100,7 +101,7 @@ Now it's done and you can see a default cards view.
 >
 > You can to not follow the template but I'm not sure in good visual result.
 
-## `<span/>`
+## Span Tag
 Dataview query is quite basic, the only thing I've added and what is not so common is `"<span " + "class='cards-icon'>" + "PROPERTY_NAME" + "</span>" + PROPERTY_VALUE as PROPERTY_NAME` code. Here you can define a name of property `PROPERTY_NAME` followed by its actual value `PROPERTY_VALUE` which is taken by Dataview query from your YAML properties. You can delete this  `"<span " + "class='cards-icon'>" + "PROPERTY_NAME" + "</span>" +` and leave only `PROPERTY_VALUE as PROPERTY_NAME`
 
 ## Progress Bar
@@ -132,7 +133,7 @@ Where
    - **Left Icon** and **Right Icon** are icons that surround **Property Name**. By default `•`. You can change it to any symbol or emoji e.g.
 ![image](https://github.com/user-attachments/assets/f94b8733-e263-4c01-bf9c-d7c349e8a034)
 
-## Some support classes for `cssclasses` property.
+## Some support classes for cssclasses property.
  - `cards-readline-off` (breaks limits of option Readable line length so you can see library with full width.
  
 ![image](https://github.com/user-attachments/assets/dfb2fbcf-96e3-4fa9-acae-151f33329338)
