@@ -1,11 +1,9 @@
 1. [About](#Cards-View-snippet)
-   - [Showcase](#Some popular themes with the snippet)
-   - asd
-3. [Headers](#headers)
-
-4. [Headers](#How-it-works)
-5. [Headers](#headers)
-6. [Headers](#headers)
+   - [Showcase](#Some-popular-themes-with-the-snippet)
+3. [Headers](#How-it-works)
+4. [Headers](#What-is-possible)
+5. [Headers](#Installation)
+6. [Headers](#Usage)
 7. [Headers](#headers)
 8. [Headers](#headers)
 9. [Headers](#headers)
