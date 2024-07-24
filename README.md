@@ -43,31 +43,63 @@ It works with Dataview table and changes its display view from table to cards.
 - and more
 
 # Installation
+0. DOWNLOAD **Style Settings plugin** and turn it on (https://github.com/mgmeyers/obsidian-style-settings).
 1. Download and enable **Dataview plugin**, learn it. (Some examples you can find in files)
 2. Download **Cards.css** file and insert it in your folder Obsidian's folder `snippets`(see documentantion https://help.obsidian.md/Extending+Obsidian/CSS+snippets) e.g. `C:\Users\User\Obsidian_folder\.obsidian\snippets\Cards.css`
 3. Enable snippet in `Settings > Appearance > CSS snippets`
 4. Create a book note. (You can copy or download demo **Omniscient Reader's Viewpoint.md**)
 Expected result: ![image|200](https://github.com/user-attachments/assets/59523ea8-2c90-4505-9723-346487332ce6)
 
-7. Create new note with Dataview query. (You can copy or download demo **Cards view.md**)
+5. Create new note with Dataview query. (You can copy or download demo **Cards view.md**)
 Expected result: ![image|200](https://github.com/user-attachments/assets/91c4aad7-1336-4083-8e0f-917e6e4f59bf)
 Now it's done and you can see a default cards view.
 
 # Usage
-1. **DOWNLOAD "Style Settings plugin"** and turn it on (https://github.com/mgmeyers/obsidian-style-settings).
-2. Open **Style Settings** plugin. I'd recommend to open it in a split view.
+## Style Settings plugin
+1. Open **Style Settings** plugin. I'd recommend to open it in a split view.
    - Open **Command Palette** `Ctrl + P`
    - Insert `Style Settings: Show style settings view`
    - Now **Style Settings** are opened in new tab. Drag and drop the tab to the left or to the right
    - Now you can change style and see result. Convenient
    
 ![image](https://github.com/user-attachments/assets/a19f1760-ec9c-4cf3-924a-ba44dff413fb)
-3. In **Style Settings** you can see two settings. For Desktop version and mobile version. `Cards snippet - DeusEx01` and `Mobile Cards snippet - DeusEx01` respectively.
+2. In **Style Settings** you can see two settings. For Desktop version and mobile version. `Cards snippet - DeusEx01` and `Mobile Cards snippet - DeusEx01` respectively.
 > [!TIP]
 > Mobile version is activated if width of screen less than 400 points. To change the width go to the snippet and find `@media(max-width:400pt)`, then change `max-width:` to your value.
-4. If you want to restore default style click `Restore default` button:
+3. If you want to restore default style click `Restore default` button:
 
 ![image](https://github.com/user-attachments/assets/ce569a55-8859-4454-a8a2-0d5958f1664f)
+
+## Dataview query
+> [!WARNING]
+> Try to follow original format of cards.
+> It includes
+> 1. **Cover image**
+> 2. **Link (note title)**
+> 3. **Rows with additional information** 
+> 4. **Progress bar**
+>
+> You can to not follow the template but I'm not sure in good visual result.
+
+### <span/>
+Dataview query is quite basic, the only thing I've added and what is not so common is `"<span " + "class='cards-icon'>" + "PROPERTY_NAME" + "</span>" + PROPERTY_VALUE as PROPERTY_NAME` code. Here you can define a name of property `PROPERTY_NAME` followed by its actual value `PROPERTY_VALUE` which is taken by Dataview query from your YAML properties. You can delete this  `"<span " + "class='cards-icon'>" + "PROPERTY_NAME" + "</span>" +` and leave only `PROPERTY_VALUE as PROPERTY_NAME`
+
+### Progress Bar
+```js
+"<progress max=" + 
+volume + " value=" + number(
+timestamp) + "> </progress> "  + number(
+timestamp) + " of " + number(
+volume) + " " + 
+units + " (" +round(number(
+timestamp)/number(
+volume)*100) + "%" + ")" as Progress
+```
+
+Where
+1. `volume` - *yaml property* where you store a total number of pages, chapters, episodes and so on. It has to be a `number` value
+2. `timestamp` - *yaml property* where you store your current page, chapter, episode and so on. It has to be a `number` value
+3. `units` - *yaml property* where you store your name of units. How you measure your book or series. (e.g. book and chapters, series and eposodes). It has to be a `text` value
 
 ## Some implicit styles
 1. `Rows Before Clip` in **Title** and **Rows** sections. It allows you to say how many rows of text you want to see before it's clipped if it's too long. Last symbols are replaced with three dots `...`. By default 2 rows are shown. E.g.
