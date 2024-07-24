@@ -133,7 +133,7 @@ Where
    - **Left Icon** and **Right Icon** are icons that surround **Property Name**. By default `•`. You can change it to any symbol or emoji e.g.
 ![image](https://github.com/user-attachments/assets/f94b8733-e263-4c01-bf9c-d7c349e8a034)
 
-## Some support classes for cssclasses property.
+## Some support classes for cssclasses property
  - `cards-readline-off` (breaks limits of option Readable line length so you can see library with full width.
  
 ![image](https://github.com/user-attachments/assets/dfb2fbcf-96e3-4fa9-acae-151f33329338)
@@ -141,7 +141,7 @@ Before: ![image|200](https://github.com/user-attachments/assets/c99be477-49f4-46
 After: ![image|200](https://github.com/user-attachments/assets/beb0ef09-b99e-401f-80b9-125578e9e8db)
 
 
-# To-Do
+# TODO
 - [x] Make adaptive cards (mobile version) for different resolutions(devices) e.g. @media (max-width: 400pt)
 - [ ] Add font-family support via Style Settings
 - [x] Make individual `.cards-icon` styles.
