@@ -100,7 +100,7 @@ Now it's done and you can see a default cards view.
 >
 > You can to not follow the template but I'm not sure in good visual result.
 
-## <span/>
+## `<span/>`
 Dataview query is quite basic, the only thing I've added and what is not so common is `"<span " + "class='cards-icon'>" + "PROPERTY_NAME" + "</span>" + PROPERTY_VALUE as PROPERTY_NAME` code. Here you can define a name of property `PROPERTY_NAME` followed by its actual value `PROPERTY_VALUE` which is taken by Dataview query from your YAML properties. You can delete this  `"<span " + "class='cards-icon'>" + "PROPERTY_NAME" + "</span>" +` and leave only `PROPERTY_VALUE as PROPERTY_NAME`
 
 ## Progress Bar
