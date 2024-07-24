@@ -43,6 +43,9 @@ It works with Dataview table and changes its display view from table to cards.
 - and more
 
 # Installation
+> [!TIP]
+> You can download demo vault https://github.com/DeusEx01/Cards-View-snippet/tree/main/Demo%20Vault
+
 0. DOWNLOAD **Style Settings plugin** and turn it on (https://github.com/mgmeyers/obsidian-style-settings).
 1. Download and enable **Dataview plugin**, learn it. (Some examples you can find in files)
 2. Download **Cards.css** file (https://github.com/DeusEx01/Cards-View-snippet/blob/main/Cards.css) and insert it in your folder Obsidian's folder `snippets`(see documentantion https://help.obsidian.md/Extending+Obsidian/CSS+snippets) e.g. `C:\Users\User\Obsidian_folder\.obsidian\snippets\Cards.css`
