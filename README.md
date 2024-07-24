@@ -8,7 +8,7 @@
    - [Dataview](#Dataview-query)
       - [span](#Span-Tag)
       - [Progress Bar](#Progress-Bar)
-9. [Implicit settings](#Some-implicit-styles)
+9. [Implicit settings](#Implicit-settings)
 10. [Support cssclasses](#Some-support-classes-for-cssclasses-property.)
 11. [todo/future features](#TODO)
 
@@ -121,7 +121,7 @@ Where
 2. `timestamp` - *yaml property* where you store your current page, chapter, episode and so on. It has to be a `number` value
 3. `units` - *yaml property* where you store your name of units. How you measure your book or series. (e.g. book and chapters, series and eposodes). It has to be a `text` value
 
-## Some implicit styles
+## Implicit settings
 1. `Rows Before Clip` in **Title** and **Rows** sections. It allows you to say how many rows of text you want to see before it's clipped if it's too long. Last symbols are replaced with three dots `...`. By default 2 rows are shown. E.g.
 
 ![image](https://github.com/user-attachments/assets/1315d68b-9339-450c-bb78-f31efd2f001c)
