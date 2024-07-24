@@ -161,6 +161,7 @@ body {
     grid-row-gap: var(--cards-row-gap);
     justify-items: center;
 
+    padding: 10px;
     clear: both;
 }
 
