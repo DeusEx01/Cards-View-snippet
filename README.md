@@ -9,7 +9,7 @@
       - [span](#Span-Tag)
       - [Progress Bar](#Progress-Bar)
 9. [Implicit settings](#Implicit-settings)
-10. [Support cssclasses](#Some-support-classes-for-cssclasses-property.)
+10. [Support cssclasses](#Support-classes)
 11. [todo/future features](#TODO)
 
 
@@ -133,7 +133,7 @@ Where
    - **Left Icon** and **Right Icon** are icons that surround **Property Name**. By default `•`. You can change it to any symbol or emoji e.g.
 ![image](https://github.com/user-attachments/assets/f94b8733-e263-4c01-bf9c-d7c349e8a034)
 
-## Some support classes for cssclasses property
+## Support classes
  - `cards-readline-off` (breaks limits of option Readable line length so you can see library with full width.
  
 ![image](https://github.com/user-attachments/assets/dfb2fbcf-96e3-4fa9-acae-151f33329338)
