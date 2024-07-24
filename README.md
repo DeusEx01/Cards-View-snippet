@@ -28,7 +28,7 @@ Here is a demo result with quick show case for different themes:
 ![image](https://github.com/user-attachments/assets/b365a371-5736-4f90-acac-2c8f45474831)
 
 ## Some popular themes with the snippet
-(Default, AnuPpuccin, Vauxhall, 80s Neon, Subtlegold)
+(Default, AnuPpuccin, Vauxhall, 80s Neon, Obsidian Nord)
 
 ![Images compilation](https://github.com/user-attachments/assets/ddcd8be8-e269-4106-889f-51658bb386ad)
 
