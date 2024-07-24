@@ -152,8 +152,7 @@ After: ![image|200](https://github.com/user-attachments/assets/beb0ef09-b99e-401
 - [ ] Collect feedbacks and make a list of needed fixes/bugs.
 - [x] Check popular themes and make better compability.
 - [ ] Think about merging with MetaData + Dataview + Snippet (Right now it's too slow for working with)
-- [ ] Change selector for readable line length to `--file-line-width` native variable
+- [x] Change selector for readable line length to `--file-line-width` native variable
 - [ ] Add changable styles for links inside rows
 - [ ] Add an ability to add background for every single card(think about it)
-- [ ] Add several hover animations
-- [ ] Add 
+- [x] Add several hover animations (underway in other repo)
