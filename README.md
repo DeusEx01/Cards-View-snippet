@@ -1,4 +1,16 @@
-1. [About](#Cards-View-snippet)  
+1. [About](#Cards-View-snippet)
+   - [Headers](##Some popular themes with the snippet(Default, AnuPpuccin, Vauxhall, 80s Neon, Subtlegold))
+   - asd
+3. [Headers](#headers)
+
+4. [Headers](#headers)
+5. [Headers](#headers)
+6. [Headers](#headers)
+7. [Headers](#headers)
+8. [Headers](#headers)
+9. [Headers](#headers)
+
+
 # Cards-View-snippet
 *Click ★ if you liked the snippet*
 
@@ -13,7 +25,7 @@ Here is a demo result with quick shows case different themes:
 
 ![image](https://github.com/user-attachments/assets/b365a371-5736-4f90-acac-2c8f45474831)
 
-#### Some popular themes with the snippet(Default, AnuPpuccin, Vauxhall, 80s Neon, Subtlegold)
+## Some popular themes with the snippet(Default, AnuPpuccin, Vauxhall, 80s Neon, Subtlegold)
 ![image](https://github.com/user-attachments/assets/3849bd1b-e69b-45cb-97a7-fc470b0b5231)
 ![image](https://github.com/user-attachments/assets/a78f31dc-cc22-4cc8-a1d4-bdb9d0c31766)
 ![image](https://github.com/user-attachments/assets/e1f3cbc4-9186-49f1-abeb-4b198934f7e4)
