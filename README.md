@@ -66,7 +66,10 @@ It works with Dataview table and changes its display view from table to cards.
 4. Create a book note. (You can copy or download demo **Omniscient Reader's Viewpoint.md**) https://github.com/DeusEx01/Cards-View-snippet/blob/main/Omniscient%20Reader's%20Viewpoint.md
 Expected result: ![image|200](https://github.com/user-attachments/assets/59523ea8-2c90-4505-9723-346487332ce6)
 
-5. Create new note with Dataview query. (https://github.com/DeusEx01/Cards-View-snippet/blob/main/Cards%20view.md) (You can copy or download demo **Cards view.md**)
+> [!TIP]
+> Don't forget about property `cssclasses: cards` in your note with library
+
+6. Create new note with Dataview query. (https://github.com/DeusEx01/Cards-View-snippet/blob/main/Cards%20view.md) (You can copy or download demo **Cards view.md**)
 Expected result: ![image|200](https://github.com/user-attachments/assets/91c4aad7-1336-4083-8e0f-917e6e4f59bf)
 Now it's done and you can see a default cards view.
 
