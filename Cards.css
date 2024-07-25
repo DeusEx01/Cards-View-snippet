@@ -28,7 +28,7 @@ body {
     --cards-columns-gap: 5px;
     --cards-row-gap: 5px;
     --cards-border-width: 1px;
-    --cards-border-color: var(--divider-color);
+    --cards-border-color: var(--tab-outline-color);
     --cards-border-radius: 10px;
 
     --cards-title-link-rows-before-clip: 2;
@@ -97,7 +97,7 @@ body {
     --cards-mobile-columns-gap: 3px;
     --cards-mobile-row-gap: 3px;
     --cards-mobile-border-width: 1px;
-    --cards-mobile-border-color: var(--divider-color);
+    --cards-mobile-border-color: var(--tab-outline-color);
     --cards-mobile-border-radius: 10px;
 
     --cards-mobile-title-link-rows-before-clip: 2;
@@ -478,7 +478,7 @@ settings:
         title: Border Color
         type: variable-color
         format: rgb
-        default: rgb(0, 0, 0, 0)
+        default: var(--tab-outline-color)
     - 
         id: cards-border-radius
         title: Border Radius
@@ -874,7 +874,7 @@ settings:
         title: Border Color
         type: variable-color
         format: rgb
-        default: rgb(0, 0, 0, 0)
+        default: var(--tab-outline-color)
     - 
         id: cards-mobile-border-radius
         title: Border Radius
