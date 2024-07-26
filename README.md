@@ -57,7 +57,7 @@ It works with Dataview table and changes its display view from table to cards.
 
 # Installation
 > [!TIP]
-> You can download demo vault https://github.com/DeusEx01/Cards-View-snippet/tree/main/Demo%20Vault
+> You can download **Demo Vault**. Click on the <> Code, extract folder **Demo Vault** and open the folder as a new vault in Obsidian
 
 0. DOWNLOAD **Style Settings plugin** and turn it on (https://github.com/mgmeyers/obsidian-style-settings).
 1. Download and enable **Dataview plugin**, learn it. (Some examples you can find in files)
