@@ -93,10 +93,10 @@ Now it's done and you can see a default cards view.
 > [!WARNING]
 > Try to follow original format of cards.
 > It includes
-> 1. **Cover image**
-> 2. **Link (note title)**
-> 3. **Rows with additional information** 
-> 4. **Progress bar**
+> 1. **Cover image** (important)
+> 2. **Link (note title)** (important)
+> 3. **Rows with additional information** (can be omitted)
+> 4. **Progress bar** (can be omitted)
 >
 > You can to not follow the template but I'm not sure in good visual result.
 
