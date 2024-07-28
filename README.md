@@ -25,7 +25,8 @@ Here is a demo result with quick show case for different themes:
 
 **Mobile version**
 
-![image](https://github.com/user-attachments/assets/b365a371-5736-4f90-acac-2c8f45474831)
+<img width=300 height=auto src="https://github.com/user-attachments/assets/b365a371-5736-4f90-acac-2c8f45474831"/>
+
 
 ## Some popular themes with the snippet
 (Default, AnuPpuccin, Vauxhall, 80s Neon, Obsidian Nord)
