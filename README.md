@@ -147,12 +147,12 @@ After: ![image|200](https://github.com/user-attachments/assets/beb0ef09-b99e-401
 
 # TODO
 - [x] Make adaptive cards (mobile version) for different resolutions(devices) e.g. @media (max-width: 400pt)
-- [ ] Add font-family support via Style Settings
+- [x] Add font-family support via Style Settings (cancelled)
 - [x] Make individual `.cards-icon` styles.
-- [ ] Collect feedbacks and make a list of needed fixes/bugs.
+- [x] Collect feedbacks and make a list of needed fixes/bugs. (no feedbacks ;c)
 - [x] Check popular themes and make better compability.
-- [ ] Think about merging with MetaData + Dataview + Snippet (Right now it's too slow for working with)
+- [x] Think about merging with MetaData + Dataview + Snippet (Right now it's too slow for working with). Made test version with `dwjs` and `db.markdownTable`, non-public
 - [x] Change selector for readable line length to `--file-line-width` native variable
-- [ ] Add changable styles for links inside rows
-- [ ] Add an ability to add background for every single card(think about it)
+- [x] Add changable styles for links inside rows (canceled)
+- [x] Add an ability to add background for every single card(think about it) (canceled)
 - [x] Add several hover animations (underway in other repo)
