@@ -58,19 +58,21 @@ It works with Dataview table and changes its display view from table to cards.
 
 # Installation
 > [!TIP]
-> You can download **Demo Vault**. Click on the <> Code, extract folder **Demo Vault** and open the folder as a new vault in Obsidian
+> You can download vault as whole. It has everything described below(plugins/templates). Click this button and download zip -> Open as a new vault in Obsidian as a new vault via **Manage vault**
+> ![image](https://github.com/user-attachments/assets/9c9bb2d5-d44d-4e6a-b6e1-8118a0944f81)
+
 
 0. DOWNLOAD **Style Settings plugin** and turn it on (https://github.com/mgmeyers/obsidian-style-settings).
 1. Download and enable **Dataview plugin**, learn it. (Some examples you can find in files)
-2. Download **Cards.css** file (https://github.com/DeusEx01/Cards-View-snippet/blob/main/Cards.css) and insert it in your folder Obsidian's folder `snippets`(see documentantion https://help.obsidian.md/Extending+Obsidian/CSS+snippets) e.g. `C:\Users\User\Obsidian_folder\.obsidian\snippets\Cards.css`
+2. Download file [**Cards.css**](https://github.com/DeusEx01/Cards-View-snippet/blob/main/.obsidian/snippets/Cards.css) and insert it in your Obsidian's folder `snippets`(see documentantion https://help.obsidian.md/Extending+Obsidian/CSS+snippets) e.g. `C:\Users\User\Obsidian_folder\.obsidian\snippets\Cards.css`
 3. Enable snippet in `Settings > Appearance > CSS snippets`
-4. Create a book note. (You can copy or download demo **Omniscient Reader's Viewpoint.md**) https://github.com/DeusEx01/Cards-View-snippet/blob/main/Omniscient%20Reader's%20Viewpoint.md
+4. Create a book note. (You can copy or download demo [Demo Book](https://github.com/DeusEx01/Cards-View-snippet/blob/main/Books/Omniscient%20Reader's%20Viewpoint.md)
 Expected result: ![image|200](https://github.com/user-attachments/assets/59523ea8-2c90-4505-9723-346487332ce6)
 
 > [!TIP]
-> Don't forget about property `cssclasses: cards` in your note with library
+> Don't forget about property `cssclasses: cards` and `cards-readline-off` in your note with library
 
-6. Create new note with Dataview query. (https://github.com/DeusEx01/Cards-View-snippet/blob/main/Cards%20view.md) (You can copy or download demo **Cards view.md**)
+6. Create new note with Dataview query. [Demo Library](https://github.com/DeusEx01/Cards-View-snippet/blob/main/Cards%20view.md)
 Expected result: ![image|200](https://github.com/user-attachments/assets/91c4aad7-1336-4083-8e0f-917e6e4f59bf)
 Now it's done and you can see a default cards view.
 
@@ -81,8 +83,10 @@ Now it's done and you can see a default cards view.
    - Insert `Style Settings: Show style settings view`
    - Now **Style Settings** are opened in new tab. Drag and drop the tab to the left or to the right
    - Now you can change style and see result. Convenient
-   
-![image](https://github.com/user-attachments/assets/a19f1760-ec9c-4cf3-924a-ba44dff413fb)
+
+ ![Style Settings demo](https://github.com/user-attachments/assets/621a0fcd-1048-4681-99f1-5c9bb4eca84d)
+  
+
 2. In **Style Settings** you can see two settings. For Desktop version and mobile version. `Cards snippet - DeusEx01` and `Mobile Cards snippet - DeusEx01` respectively.
 > [!TIP]
 > Mobile version is activated if width of screen less than 400 points. To change the width go to the snippet and find `@media(max-width:400pt)`, then change `max-width:` to your value.
@@ -124,6 +128,7 @@ Where
 1. `volume` - *yaml property* where you store a total number of pages, chapters, episodes and so on. It has to be a `number` value
 2. `timestamp` - *yaml property* where you store your current page, chapter, episode and so on. It has to be a `number` value
 3. `units` - *yaml property* where you store your name of units. How you measure your book or series. (e.g. book and chapters, series and eposodes). It has to be a `text` value
+
 
 ## Implicit settings
 1. `Rows Before Clip` in **Title** and **Rows** sections. It allows you to say how many rows of text you want to see before it's clipped if it's too long. Last symbols are replaced with three dots `...`. By default 2 rows are shown. E.g.
