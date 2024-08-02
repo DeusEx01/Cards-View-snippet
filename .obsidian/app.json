@@ -1,0 +1,15 @@
+{
+  "readableLineLength": true,
+  "livePreview": false,
+  "showRibbon": false,
+  "defaultViewMode": "preview",
+  "strictLineBreaks": false,
+  "promptDelete": false,
+  "foldIndent": true,
+  "foldHeading": true,
+  "showLineNumber": true,
+  "showIndentGuide": true,
+  "rightToLeft": false,
+  "showInlineTitle": true,
+  "attachmentFolderPath": "Attachments"
+}
