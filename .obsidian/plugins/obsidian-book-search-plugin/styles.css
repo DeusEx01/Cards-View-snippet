@@ -1,0 +1,47 @@
+.book-search-plugin__settings .search-input-container {
+  width: 100%;
+}
+
+.book-search-plugin__settings--new_file_name {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.book-search-plugin__settings--new_file_name_hint {
+  margin-bottom: 20px;
+}
+.book-search-plugin__settings--service_provider .dropdown {
+  text-transform: capitalize;
+}
+
+.book-search-plugin__hide {
+  display: none;
+}
+
+.book-search-plugin__show {
+  display: flex;
+}
+
+.book-search-plugin__search-modal--input {
+  padding-bottom: 18px;
+}
+.book-search-plugin__search-modal--input input {
+  width: 100%;
+}
+
+.book-suggestion-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.book-cover-image {
+  max-width: 100px;
+  max-height: 100px;
+  margin-right: 10px;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+.book-text-info {
+  flex-grow: 1;
+}
