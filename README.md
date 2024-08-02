@@ -23,6 +23,10 @@ Here is a demo result with quick show case for different themes:
 
 ![DEMO GIT 2](https://github.com/user-attachments/assets/3b93e913-b51d-4a51-adf4-791ebb376c81)
 
+Here is how you can use it with Tabs plugin.
+
+![Tabs plugin + cards snippet](https://github.com/user-attachments/assets/24442df2-0dab-4fb5-97cd-2743c3112d08)
+
 **Mobile version**
 
 <img width=300 height=auto src="https://github.com/user-attachments/assets/b365a371-5736-4f90-acac-2c8f45474831"/>
@@ -33,9 +37,7 @@ Here is a demo result with quick show case for different themes:
 
 ![Images compilation](https://github.com/user-attachments/assets/ddcd8be8-e269-4106-889f-51658bb386ad)
 
-Here is how you can use it with Tabs plugin.
 
-![Tabs plugin + cards snippet](https://github.com/user-attachments/assets/24442df2-0dab-4fb5-97cd-2743c3112d08)
 
 
 
