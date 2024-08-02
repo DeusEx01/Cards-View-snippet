@@ -33,9 +33,10 @@ Here is a demo result with quick show case for different themes:
 
 ![Images compilation](https://github.com/user-attachments/assets/ddcd8be8-e269-4106-889f-51658bb386ad)
 
-And here is my personal tweaked snippet like a showcase(I've changed some stuff to my taste and you can do it too. See **Usage** section):
+Here is how you can use it with Tabs plugin.
 
-![image](https://github.com/user-attachments/assets/9f90822b-5f49-4439-b4d4-abe2a6ae13a9)
+![Tabs plugin + cards snippet](https://github.com/user-attachments/assets/24442df2-0dab-4fb5-97cd-2743c3112d08)
+
 
 
 **Remember, it's a raw and new snippet, so there are some things that you and me don't expect <3**
