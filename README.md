@@ -41,7 +41,7 @@ And here is my personal tweaked snippet like a showcase(I've changed some stuff 
 **Remember, it's a raw and new snippet, so there are some things that you and me don't expect <3**
 
 # How it works
-It works with Dataview table and changes its display view from table to cards. Also there are supporting plugin: [Style Settings](https://github.com/mgmeyers/obsidian-style-settings), [Tabs](https://github.com/xhuajin/obsidian-tabs) and [Book Search](https://github.com/anpigon/obsidian-book-search-plugin)
+It works with [Dataview](https://github.com/blacksmithgu/obsidian-dataview) table and changes its display view from table to cards. Also there are supporting plugin: [Style Settings](https://github.com/mgmeyers/obsidian-style-settings), [Tabs](https://github.com/xhuajin/obsidian-tabs) and [Book Search](https://github.com/anpigon/obsidian-book-search-plugin)
 > [!TIP]
 > You can download a **Hover Editor** plugin and be able to edit your notes without opening it in a new tab.
 
