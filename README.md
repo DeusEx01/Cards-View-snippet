@@ -23,7 +23,7 @@ Here is a demo result with quick show case for different themes:
 
 ![DEMO GIT 2](https://github.com/user-attachments/assets/3b93e913-b51d-4a51-adf4-791ebb376c81)
 
-Here is how you can use it with Tabs plugin.
+Here is how you can use it with [Tabs plugin](https://github.com/xhuajin/obsidian-tabs).
 
 ![Tabs plugin + cards snippet](https://github.com/user-attachments/assets/24442df2-0dab-4fb5-97cd-2743c3112d08)
 
